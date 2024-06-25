@@ -43,7 +43,25 @@ function createBullets() {
 }
 createBullets();
 
+// 갤러리 모달창 이벤트
+thumbnails.forEach(item => {
+    item.addEventListener("click",(e)=>{
+        e.preventDefault();
+        body.classList.add("scroll_hidden")
+        overlay.style.display = "block";
+        // 썸네일 원본 사진 링크와 갤러리 슬라이드 이미지 소스 링크 연결
+        for (let i=0; i<thumbnails.length; i++) {
+            var photo = thumbnails[i].lastElementChild;
+            bigPhoto[i].src = photo.href
+        };
+        });
+        document.querySelector("button.close").addEventListener("click", ()=> {
+            overlay.style.display = "none";
+            body.classList.remove("scroll_hidden")
+        
+    })
 
+})
 
 // 슬라이드 버튼 클릭 이벤트
 document.querySelector("#next_btn").addEventListener("click", nextSlideImage)
@@ -141,6 +159,9 @@ function indicator(e) {
     marker.style.width = e.offsetWidth+"px";
 }
 
+document.querySelector(".greeting").classList.add("focus-in-expand");
+document.querySelector(".profile__introduction").classList.add("tracking-in-contract");
+
 // 스크롤 위치에 따라 해당하는 nav 메뉴의 색깔이 바뀜 & 섹션 등장 애니메이션
 window.addEventListener("scroll", ()=> {
     let current="";
@@ -158,10 +179,10 @@ window.addEventListener("scroll", ()=> {
             current = section.getAttribute("id");
         }
         // 섹션 등장 애니메이션
-        if(current=="profile") {
-            document.querySelector(".greeting").classList.add("focus-in-expand");
-            document.querySelector(".profile__introduction").classList.add("tracking-in-contract");
-        }
+        // if(current=="profile") {
+        //     document.querySelector(".greeting").classList.add("focus-in-expand");
+        //     document.querySelector(".profile__introduction").classList.add("tracking-in-contract");
+        // }
         if(current=="contact") {
             document.querySelector(".choco-img").classList.add("slide-in-left");
             document.querySelector(".box_contact > .category-title").classList.add("slide-in-left");

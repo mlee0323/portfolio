@@ -251,11 +251,11 @@ html {
 
 body {
   font-family: "NEXON Lv2 Gothic", sans-serif;
-  color: #02253b;
+  color: #cccccc;
   list-style: none;
-  background: #dbe9f6;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(15%, #dbe9f6), color-stop(44%, #fefcc9), to(#f7d0d5));
-  background: linear-gradient(180deg, #dbe9f6 15%, #fefcc9 44%, #f7d0d5 100%);
+  background: #1b1b1e;
+  /* background: -webkit-gradient(linear, left top, left bottom, color-stop(15%, #dbe9f6), color-stop(44%, #fefcc9), to(#f7d0d5)); */
+  /* background: linear-gradient(180deg, #dbe9f6 15%, #fefcc9 44%, #f7d0d5 100%); */
 }
 
 .scroll_hidden {
@@ -584,53 +584,6 @@ body {
 }
 
 /* button */
-.btn_go-to-work {
-  width: 14.8rem;
-  height: 4.25rem;
-  border-radius: 2rem;
-  margin-top: 5rem;
-  border: none;
-  cursor: pointer;
-  background: #9f8be0;
-  background-image: -webkit-gradient(linear, left top, right top, from(#9f8be0), color-stop(60%, #faaeca), color-stop(90%, #fed0c1));
-  background-image: linear-gradient(to right, #9f8be0 0%, #faaeca 60%, #fed0c1 90%);
-  -webkit-box-shadow: 0 4px 15px 0 rgba(159, 139, 224, 0.75);
-          box-shadow: 0 4px 15px 0 rgba(159, 139, 224, 0.75);
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-  background-size: 200% 100%;
-}
-
-@media screen and (max-width: 1200px) {
-  .btn_go-to-work {
-    float: left;
-    margin-top: 1rem;
-  }
-}
-
-@media screen and (max-width: 757px) {
-  .btn_go-to-work {
-    margin: 2rem 25% 0 25%;
-  }
-}
-
-.btn_go-to-work > span {
-  line-height: 4.25rem;
-  font-family: "NEXON Lv2 Gothic";
-  color: white;
-  letter-spacing: 0.05em;
-  font-size: 1.5rem;
-  text-shadow: rgba(0, 0, 0, 0.24) 1px 0 10px;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
-
-@media screen and (max-width: 757px) {
-  .btn_go-to-work > span {
-    margin: 0 auto;
-  }
-}
-
 .btn_hover:hover > span {
   text-shadow: rgba(0, 0, 0, 0.4) 1px 0 10px;
 }
@@ -640,28 +593,21 @@ body {
   background-position: 100% 0;
 }
 
-.btn_go-to-work:hover {
-  -webkit-transform: translateY(-7%);
-          transform: translateY(-7%);
-  -webkit-box-shadow: 0 10px 20px 0 rgba(250, 174, 202, 0.5);
-          box-shadow: 0 10px 20px 0 rgba(250, 174, 202, 0.5);
-}
-
 .work__btn-view {
   width: 100px;
   height: 34px;
   border-radius: 16px;
   border: none;
   margin: 0.9em auto;
-  background: #9759bb;
-  background-image: -webkit-gradient(linear, left top, right top, from(#f6af97), color-stop(#fca6c6), color-stop(70%, #9759bb));
-  background-image: linear-gradient(to right, #f6af97, #fca6c6, #9759bb 70%);
+  background: #cccccc;
+  background-image: -webkit-gradient(linear, left top, right top, from(#1b1b1e), color-stop(#fca6c6), color-stop(70%, #9759bb));
+  background-image: #1b1b1e;
   background-size: 200% 100%;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
-  -webkit-box-shadow: rgba(252, 166, 198, 0.6) 3px 10px 20px 0px;
-          box-shadow: rgba(252, 166, 198, 0.6) 3px 10px 20px 0px;
+  -webkit-box-shadow: #737373 3px 10px 20px 0px;
+          box-shadow: #737373 3px 10px 20px 0px;
   /* 텍스트 */
   font-family: "NEXON Lv2 Gothic Bold";
   color: white;
@@ -671,8 +617,8 @@ body {
 }
 
 .work__btn-view:hover {
-  -webkit-box-shadow: rgba(206, 121, 255, 0.5) 3px 10px 20px 0px;
-          box-shadow: rgba(206, 121, 255, 0.5) 3px 10px 20px 0px;
+  -webkit-box-shadow: #101012 3px 10px 20px 0px;
+          box-shadow: #101012 3px 10px 20px 0px;
 }
 
 @media screen and (max-width: 757px) {
@@ -724,99 +670,6 @@ body {
   }
 }
 
-.home-title {
-  width: 47%;
-  height: 330px;
-  float: left;
-}
-
-@media screen and (max-width: 1200px) {
-  .home-title {
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
-  }
-}
-
-@media screen and (max-width: 757px) {
-  .home-title {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    float: none;
-    height: auto;
-  }
-}
-
-.main-title {
-  font-family: "SBAggroB";
-  font-size: 6.25rem;
-  letter-spacing: 0.025em;
-  line-height: 1.1;
-}
-
-@media screen and (max-width: 757px) {
-  .main-title {
-    text-align: center;
-  }
-}
-
-.title__first {
-  background: #9759bb;
-  background: linear-gradient(-154deg, #9759bb 20%, #fca6c6 60%, #f6af97 80%);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-}
-
-.title__first::first-letter {
-  font-size: 8.5rem;
-}
-
-.title__second {
-  background: #f6af97;
-  background: linear-gradient(-155deg, #f6af97 25%, #fca6c6 51%, #9759bb 70%);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-}
-
-.sub-title {
-  font-family: "SBAggroL";
-  line-height: 5em;
-  font-size: 1.5rem;
-  color: #9d5cbb;
-  margin-left: 1em;
-}
-
-@media screen and (max-width: 757px) {
-  .sub-title {
-    text-align: center;
-  }
-}
-
-.title_photo {
-  float: right;
-}
-
-@media screen and (max-width: 1200px) {
-  .title_photo {
-    width: 45%;
-  }
-}
-
-@media screen and (max-width: 757px) {
-  .title_photo {
-    width: 90%;
-    float: none;
-    margin: 0 auto;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .title_photo img {
-    width: 100%;
-  }
-}
-
 @media screen and (max-width: 1200px) {
   .header__column_left {
     width: 47%;
@@ -862,9 +715,10 @@ body {
 .nav_fixed {
   height: 5rem;
   padding: 0;
-  background-color: white;
+  background-color: #1e1e1e;
   -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 8px 13px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
           box-shadow: rgba(50, 50, 93, 0.25) 0px 8px 13px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  outline: 2px solid #292929;
 }
 
 @media screen and (max-width: 757px) {
@@ -913,7 +767,7 @@ body {
     width: 100%;
     height: 0;
     padding-top: 7rem;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: #1e1e1e;
   }
 }
 
@@ -947,7 +801,7 @@ body {
 }
 
 .nav__menu > li > a.current-menu {
-  color: #9d5cbb;
+  color: #717070;
 }
 
 @media screen and (max-width: 757px) {
@@ -968,7 +822,7 @@ body {
   left: 50%;
   width: 0%;
   height: 3px;
-  background-color: #9d5cbb;
+  background-color: #717070;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -1059,20 +913,19 @@ body {
   display: block;
   width: 34px;
   height: 4px;
-  background-color: #9885d7;
+  background-color: #717070;
 }
 
 .box-component {
   width: 1180px;
   margin: 0 10px;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.1)));
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
+  background: #1e1e1e;
   border-radius: 16px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 6px 12px;
           box-shadow: rgba(0, 0, 0, 0.1) 0px 6px 12px;
   backdrop-filter: blur(0px);
   -webkit-backdrop-filter: blur(0px);
-  border: 1px solid white;
+  border: 1px solid #292929;
 }
 
 @media screen and (max-width: 1200px) {
@@ -1101,43 +954,12 @@ body {
   }
 }
 
-.choco-img {
-  position: absolute;
-  left: -100px;
-  top: 50%;
-  -webkit-transform: translate(-200%, -50%);
-          transform: translate(-200%, -50%);
-  width: 12.5rem;
-  height: 25.25rem;
-  z-index: 9;
-  opacity: 0;
-}
-
-@media screen and (max-width: 1200px) {
-  .choco-img {
-    left: 1rem;
-  }
-}
-
-@media screen and (max-width: 757px) {
-  .choco-img {
-    width: calc(12.5rem * 0.8);
-    height: calc(25.25rem * 0.8);
-    top: 0;
-    left: 0;
-  }
-}
-
-.choco-img img {
-  width: 100%;
-}
-
 .box_contact {
   position: relative;
   margin: 10px;
   height: 666px;
   padding: 40px 0;
-  background-color: white;
+  background-color: #1e1e1e;
   -webkit-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
           box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
@@ -1155,7 +977,7 @@ body {
 }
 
 .box_contact > .category-title {
-  opacity: 1;
+  opacity: 0;
 }
 
 .contact__address {
@@ -1166,7 +988,7 @@ body {
           transform: translate(-50%, -50%);
   width: 320px;
   text-align: center;
-  opacity: 1;
+  opacity: 0;
 }
 
 @media screen and (max-width: 757px) {
@@ -1239,7 +1061,7 @@ body {
 .address__subtitle {
   display: block;
   font-family: "NEXON Lv2 Gothic Bold";
-  color: #9885d7;
+  color: #cccccc;
   font-size: 1.5rem;
   margin-bottom: 1em;
 }
@@ -1255,7 +1077,7 @@ body {
   width: 110%;
   height: 140%;
   border-radius: 50%;
-  background-color: #9885d7;
+  /* background-color: #9885d7; */
   -webkit-box-shadow: rgba(53, 53, 112, 0.2) 0px 30px 60px -12px inset;
           box-shadow: rgba(53, 53, 112, 0.2) 0px 30px 60px -12px inset;
   z-index: 0;
@@ -1533,8 +1355,8 @@ button.close {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(rgba(255, 255, 255, 0.5)), to(transparent));
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  /* background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(rgba(255, 255, 255, 0.5)), to(transparent));
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent); */
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -1580,16 +1402,15 @@ button.close {
 .bg-color {
   background: midnightblue;
 }
+
 .profile__photo {
   display: block;
   width: 250px;
   height: 250px;
   border-radius: 50%;
   margin: 23px auto;
-  background-color: #9885d7;
-  -webkit-box-shadow: rgba(152, 133, 215, 0.5) 0px 7px 29px 0px;
-          box-shadow: rgba(152, 133, 215, 0.5) 0px 7px 29px 0px;
-  background: #9885d7;
+  -webkit-box-shadow: #737373 0px 7px 29px 0px;
+          box-shadow: #737373 0px 7px 29px 0px;
   overflow: hidden;
   position: relative; /* 추가 */
 }
@@ -1602,9 +1423,9 @@ button.close {
 
 .profile__photo > img {
   position: absolute; /* 추가 */
-  top: 15%; /* 추가 */
+  top: 50%; /* 추가 */
   left: 50%; /* 추가 */
-  transform: translate(-50%, -50%) scale(3); /* 중앙으로 이동 후 확대 */
+  transform: translate(-50%, -50%) scale(2); /* 중앙으로 이동 후 2배 확대 */
   width: auto; /* 수정 */
   height: 100%; /* 수정 */
   object-fit: cover; /* 이미지 비율을 유지하면서 원에 맞게 채움 */
@@ -1613,6 +1434,7 @@ button.close {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
+
 
 @media screen and (max-width: 757px) {
   .profile__photo > img {
@@ -1624,11 +1446,11 @@ button.close {
   opacity: 1;
 }
 
-.profile__headline {
+/* .profile__headline {
   width: 320px;
   height: 170px;
   margin: 3.875rem auto;
-}
+} */
 
 @media screen and (max-width: 757px) {
   .profile__headline {
@@ -1645,7 +1467,7 @@ button.close {
   color: var(--text-purple);
   font-size: 3em;
   line-height: 1.2em;
-  opacity: 1;
+  opacity: 0;
 }
 
 @media screen and (max-width: 757px) {
@@ -1661,7 +1483,7 @@ button.close {
   height: 300px;
   padding: 3em 0;
   line-height: 1.4;
-  opacity: 1;
+  opacity: 0;
 }
 
 @media screen and (max-width: 1200px) {
@@ -1813,7 +1635,7 @@ button.close {
   display: block;
   width: 25px;
   height: 2px;
-  background-color: #9885d7;
+  background-color: #717070;
 }
 
 .profile__skill-icon::after {
@@ -2022,7 +1844,7 @@ button.close {
   width: 100%;
   height: 100%;
   color: white;
-  opacity: 1;
+  opacity: 0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   vertical-align: middle;
@@ -2110,7 +1932,7 @@ button.close {
 #footer {
   width: 100%;
   height: 12rem;
-  background-color: #9885d7;
+  /* background-color: #9885d7; */
   text-align: center;
 }
 
