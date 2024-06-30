@@ -1413,19 +1413,20 @@ button.close {
           box-shadow: #737373 0px 7px 29px 0px;
   overflow: hidden;
   position: relative; /* 추가 */
+  background-color: white;
 }
 
 @media screen and (max-width: 757px) {
   .profile__photo {
-    background: transparent;
+    background: white;
   }
 }
 
 .profile__photo > img {
   position: absolute; /* 추가 */
-  top: 50%; /* 추가 */
+  top: 55%; /* 추가 */
   left: 50%; /* 추가 */
-  transform: translate(-50%, -50%) scale(2); /* 중앙으로 이동 후 2배 확대 */
+  transform: translate(-50%, -50%) scale(1.1); /* 중앙으로 이동 후 2배 확대 */
   width: auto; /* 수정 */
   height: 100%; /* 수정 */
   object-fit: cover; /* 이미지 비율을 유지하면서 원에 맞게 채움 */
