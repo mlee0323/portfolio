@@ -1,26 +1,125 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Dark Theme (Default) */
+:root,
+[data-theme="dark"] {
+  --bg-primary: #0f1b2a;
+  --bg-secondary: #232f3e;
+  --bg-card: #242f3e;
+  --bg-input: #1a242f;
+  --text-primary: #ffffff;
+  --text-secondary: #aab7b8;
+  --text-muted: #879596;
+  --border-color: #3b4b5a;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Light Theme */
+[data-theme="light"] {
+  --bg-primary: #f8f9fa;
+  --bg-secondary: #ffffff;
+  --bg-card: #ffffff;
+  --bg-input: #f3f4f6;
+  --text-primary: #1f2937;
+  --text-secondary: #4b5563;
+  --text-muted: #6b7280;
+  --border-color: #e5e7eb;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Override Tailwind classes for theme support */
+.bg-aws-navy {
+  background-color: var(--bg-primary);
+}
+
+.bg-aws-squid-ink {
+  background-color: var(--bg-secondary);
+}
+
+.bg-aws-card {
+  background-color: var(--bg-card);
+}
+
+.bg-aws-input {
+  background-color: var(--bg-input);
+}
+
+.text-white {
+  color: var(--text-primary);
+}
+
+.text-aws-text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-aws-text-muted {
+  color: var(--text-muted);
+}
+
+.border-aws-border {
+  border-color: var(--border-color);
+}
+
+/* Form inputs */
+input,
+textarea {
+  background-color: var(--bg-input);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@theme inline {
+  --color-aws-squid-ink: #232f3e;
+  --color-aws-dark-blue: #1a242f;
+  --color-aws-navy: #0f1b2a;
+  --color-aws-orange: #ff9900;
+  --color-aws-orange-hover: #ec7211;
+  --color-aws-teal: #00a1c9;
+  --color-aws-green: #1d8102;
+  --color-aws-red: #d13212;
+  --color-aws-border: #3b4b5a;
+  --color-aws-card: #242f3e;
+  --color-aws-input: #1a242f;
+  --color-aws-text: #fafafa;
+  --color-aws-text-secondary: #aab7b8;
+  --color-aws-text-muted: #879596;
 }
