@@ -2,24 +2,30 @@
 // 추가/수정하면 Education 페이지에 자동 반영
 
 export const certifications = [
+
   { 
-    name: { kr: 'AWS Solutions Architect', en: 'AWS Solutions Architect' },
+    name: { kr: 'TOEIC', en: 'TOEIC' },
+    status: { kr: '2025년 취득', en: 'Acquired 2025' },
+    // score: '850',
+    preparing: false 
+  },
+  { 
+    name: { kr: 'OPIc', en: 'OPIc' },
+    status: { kr: '2025년 취득', en: 'Acquired 2025' },
+    // score: 'IM2',
+    preparing: false 
+  },
+
+  // 취득 예정 (준비 중)
+  { 
+    name: { kr: 'AWS Solutions Architect', en: 'AWS Solutions Architect Associate' },
     status: { kr: '준비중', en: 'Preparing' },
     preparing: true 
   },
   { 
-    name: { kr: '리눅스마스터 2급', en: 'Linux Master Level 2' },
-    status: { kr: '2024년 취득', en: 'Acquired 2024' },
-    preparing: false 
+    name: { kr: 'CKA', en: 'CKA' },
+    status: { kr: '준비중', en: 'Preparing' },
+    preparing: true 
   },
-  { 
-    name: { kr: '정보처리기사', en: 'Engineer Information Processing' },
-    status: { kr: '2024년 취득', en: 'Acquired 2024' },
-    preparing: false 
-  },
-  { 
-    name: { kr: '네트워크관리사 2급', en: 'Network Manager Level 2' },
-    status: { kr: '2024년 취득', en: 'Acquired 2024' },
-    preparing: false 
-  },
+
 ];

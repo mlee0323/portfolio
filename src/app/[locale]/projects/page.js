@@ -1,100 +1,8 @@
 "use client";
-import { useState, useEffect, use } from 'react';
-import { createPortal } from 'react-dom';
+import { useState, use } from 'react'; // useEffect, createPortal removed from here as they are in the component
 import { t } from '@/lib/i18n';
 import { projects } from '@/lib/data';
-
-function ProjectModal({ project, locale, onClose }) {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  useEffect(() => {
-    const handleEsc = (e) => {
-      if (e.key === 'Escape') onClose();
-    };
-    window.addEventListener('keydown', handleEsc);
-    return () => window.removeEventListener('keydown', handleEsc);
-  }, [onClose]);
-
-  if (!project || !mounted) return null;
-
-  const modalContent = (
-    <div className="fixed inset-0 bg-black/70 z-[100] flex items-center justify-center p-4" onClick={onClose}>
-      <div 
-        className="bg-aws-card border border-aws-border rounded-lg max-w-2xl w-full max-h-[80vh] overflow-y-auto animate-fadeIn"
-        onClick={(e) => e.stopPropagation()}
-      >
-        <div className="sticky top-0 bg-aws-card border-b border-aws-border p-4 flex justify-between items-start">
-          <div>
-            <span className={`text-xs font-semibold px-2 py-1 rounded ${
-              project.status === 'running' ? 'bg-aws-green/10 text-aws-green' : 'bg-aws-text-muted/10 text-aws-text-muted'
-            }`}>
-              ● {project.status === 'running' ? 'Running' : 'Completed'}
-            </span>
-            <h2 className="text-xl font-semibold mt-2">{project.name[locale]}</h2>
-            <p className="text-sm text-aws-text-muted mt-1">{project.desc[locale]}</p>
-          </div>
-          <button 
-            onClick={onClose}
-            className="text-aws-text-muted hover:text-white text-2xl leading-none"
-          >
-            ×
-          </button>
-        </div>
-        
-        <div className="p-4 space-y-4">
-          {project.period && (
-            <div className="flex items-center gap-2 text-sm">
-              <span className="text-aws-text-muted">📅 기간:</span>
-              <span>{project.period}</span>
-            </div>
-          )}
-
-          <div>
-            <h3 className="font-medium mb-2 text-aws-orange">🔧 기술 스택</h3>
-            <div className="flex flex-wrap gap-2">
-              {project.tags.map((tag, i) => (
-                <span key={i} className="px-3 py-1 bg-aws-orange/10 text-aws-orange text-sm rounded">
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          {project.detail && (
-            <div>
-              <h3 className="font-medium mb-2 text-aws-teal">📋 주요 내용</h3>
-              <ul className="space-y-2">
-                {project.detail[locale].map((item, i) => (
-                  <li key={i} className="flex items-start gap-2 text-sm text-aws-text-secondary">
-                    <span className="text-aws-teal mt-0.5">•</span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-        </div>
-
-        <div className="sticky bottom-0 bg-aws-card border-t border-aws-border p-4">
-          <a 
-            href={project.link} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2 bg-aws-orange text-black font-semibold rounded hover:bg-aws-orange-hover transition-all"
-          >
-            💻 GitHub에서 보기 →
-          </a>
-        </div>
-      </div>
-    </div>
-  );
-
-  return createPortal(modalContent, document.body);
-}
+import ProjectModal from '@/components/ProjectModal';
 
 export default function ProjectsPage({ params }) {
   const { locale } = use(params);
@@ -142,7 +50,7 @@ export default function ProjectsPage({ params }) {
             </div>
             <div className="hidden md:flex gap-1 flex-wrap">
               {project.tags.slice(0, 3).map((tag, j) => (
-                <span key={j} className="px-2 py-0.5 bg-aws-orange/10 text-aws-orange text-[10px] rounded">{tag}</span>
+                <span key={j} className="px-2 py-0.5 bg-aws-orange/10 text-aws-orange text-sm rounded">{tag}</span>
               ))}
             </div>
             <button 

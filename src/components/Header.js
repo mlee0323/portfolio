@@ -68,7 +68,7 @@ export default function Header({ onMenuToggle }) {
         
         {/* Language Toggle - Single Button */}
         <Link 
-          href={`/${otherLocale}/${currentPagePath}`}
+          href={`/${otherLocale}/${pathParts.slice(1).join('/')}`}
           className="px-3 py-1.5 border border-aws-border rounded text-sm hover:bg-white/10 hover:border-aws-orange transition-all"
           title={locale === 'kr' ? 'Switch to English' : '한국어로 변경'}
         >

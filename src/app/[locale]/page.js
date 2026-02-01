@@ -83,14 +83,14 @@ export default function DashboardPage({ params }) {
             <Link 
               key={i}
               href={`/${locale}/projects`}
-              className="grid grid-cols-[80px_1fr_150px_30px] items-center p-3 bg-aws-input rounded hover:bg-aws-card hover:translate-x-1 transition-all"
+              className="grid grid-cols-[90px_1fr_150px_30px] gap-2 items-center p-3 bg-aws-input rounded hover:bg-aws-card hover:translate-x-1 transition-all"
             >
               <span className={`text-xs font-semibold ${project.status === 'running' ? 'text-aws-green' : 'text-aws-text-muted'}`}>
                 ● {project.status === 'running' ? 'Running' : 'Completed'}
               </span>
-              <span className="font-medium text-sm">{project.name[locale]}</span>
-              <span className="text-xs text-aws-text-muted hidden md:block">{project.tags.join(', ')}</span>
-              <span className="text-aws-orange">→</span>
+              <span className="font-medium text-sm truncate pr-2">{project.name[locale]}</span>
+              <span className="text-xs text-aws-text-muted hidden md:block whitespace-nowrap overflow-hidden text-ellipsis">{project.tags.slice(0, 3).join(', ')}</span>
+              <span className="text-aws-orange text-right">→</span>
             </Link>
           ))}
         </div>

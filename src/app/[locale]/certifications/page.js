@@ -14,7 +14,7 @@ export default function CertificationsPage({ params }) {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {certifications.map((cert, i) => (
+        {certifications.filter(c => !c.preparing).map((cert, i) => (
           <div 
             key={i} 
             className={`bg-aws-card border border-aws-border rounded-lg p-5 hover:border-aws-orange transition-all ${
@@ -27,11 +27,18 @@ export default function CertificationsPage({ params }) {
               }`}>
                 {cert.preparing ? '📚' : '✅'}
               </div>
-              <div className="flex-1">
+              <div className="flex-1 flex flex-col gap-1">
                 <h3 className="font-medium text-white">{cert.name[locale]}</h3>
-                <p className={`text-sm mt-1 ${cert.preparing ? 'text-aws-orange' : 'text-aws-teal'}`}>
-                  {cert.status[locale]}
-                </p>
+                <div className="flex items-center gap-2">
+                  <p className={`text-sm ${cert.preparing ? 'text-aws-orange' : 'text-aws-teal'}`}>
+                    {cert.status[locale]}
+                  </p>
+                  {cert.score && (
+                    <span className="px-2 py-0.5 bg-aws-teal/10 text-aws-teal text-xs font-semibold rounded border border-aws-teal/30">
+                      {cert.score}
+                    </span>
+                  )}
+                </div>
               </div>
               {!cert.preparing && (
                 <span className="text-aws-teal text-xl">🏆</span>
@@ -44,9 +51,9 @@ export default function CertificationsPage({ params }) {
       <div className="mt-8 bg-aws-card border border-aws-border rounded-lg p-5">
         <h3 className="font-medium mb-4">{t(locale, 'certifications.planned')}</h3>
         <div className="flex flex-wrap gap-2">
-          {['AWS SAA', 'AWS DVA', 'CKA', 'CKAD'].map((cert, i) => (
+          {certifications.filter(c => c.preparing).map((cert, i) => (
             <span key={i} className="px-3 py-1.5 bg-aws-input border border-aws-border rounded text-sm text-aws-text-muted">
-              {cert}
+              {cert.name[locale]}
             </span>
           ))}
         </div>

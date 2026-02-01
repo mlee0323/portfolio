@@ -62,6 +62,12 @@ export const translations = {
     'projects.tags': 'Tags',
     'projects.action': 'Action',
     'projects.view': 'View →',
+    'projects.techStacks': '🔧 기술 스택',
+    'projects.details': '📋 주요 내용',
+    'projects.screenshots': '📷 스크린샷',
+    'projects.techStacks': '🔧 기술 스택',
+    'projects.details': '📋 주요 내용',
+    'projects.screenshots': '📷 스크린샷',
     
     // Personal Projects
     'personalProjects.title': '💡 개인 프로젝트',
@@ -143,6 +149,9 @@ export const translations = {
     'projects.tags': 'Tags',
     'projects.action': 'Action',
     'projects.view': 'View →',
+    'projects.techStacks': '🔧 Tech Stacks',
+    'projects.details': '📋 Key Details',
+    'projects.screenshots': '📷 Screenshots',
     
     // Personal Projects
     'personalProjects.title': '💡 Personal Projects',

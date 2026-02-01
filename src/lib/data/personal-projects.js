@@ -32,20 +32,18 @@ export const personalProjects = [
     desc: { kr: '하이브리드 클러스터 구성의 업비트 구현', en: 'Ubpit Clone with Hybrid Cluster' },
     detail: {
       kr: [
-        '사람인, 잡코리아, 원티드 등 주요 채용사이트 크롤링',
-        'Selenium을 활용한 동적 페이지 처리',
-        'Pandas를 이용한 데이터 정제 및 Excel 저장',
-        '키워드 기반 필터링 기능'
+        'Redis를 활용한 실시간 시세 데이터 처리',
+
       ],
       en: [
-        'Crawling major job sites (Saramin, JobKorea, Wanted)',
-        'Dynamic page handling with Selenium',
-        'Data processing and Excel export with Pandas',
-        'Keyword-based filtering functionality'
+        'Real-time market data processing with Redis',
+
       ]
     },
-    tags: ['Python', 'Selenium', 'Pandas'], 
+    tags: ['Kubernetes', 'VMWare', 'Docker', 'Node.js', 'Tailscale', 'Timescale', 'Redis', 'Grafana', 'Prometheus'], 
     link: 'https://github.com/mlee0323/upbit-clone',
-    period: '2025.12.18-2026.01.09'
+    period: '2025.12.18-2026.01.09',
+    imageHeader: { kr: '아키텍처', en: 'Architecture' },
+    images: ['/images/projects/upbit-clone.png']
   },
 ];
