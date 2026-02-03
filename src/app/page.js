@@ -6,7 +6,11 @@ export default function RootPage() {
   const router = useRouter();
   
   useEffect(() => {
-    router.replace('/kr/');
+    // Prevent infinite redirect loop
+    // If we are already on a sub-page (e.g., /kr/), do not redirect
+    if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+      router.replace('/kr/');
+    }
   }, [router]);
   
   return (

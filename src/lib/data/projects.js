@@ -2,29 +2,27 @@
 // 추가/수정하면 Dashboard, Projects 페이지에 자동 반영
 
 export const projects = [
-  // { 
-  //   id: 'ecs',
-  //   status: 'running', 
-  //   name: { kr: 'AWS ECS 웹 서비스 배포', en: 'AWS ECS Web Service Deployment' },
-  //   desc: { kr: 'Docker 컨테이너를 활용한 AWS ECS에 웹 서비스 배포', en: 'Web service deployment on AWS ECS using Docker containers' },
-  //   detail: {
-  //     kr: [
-  //       'FastAPI 백엔드와 Nginx 프론트엔드를 Docker 컨테이너로 구성',
-  //       'AWS ECS Fargate를 활용한 서버리스 컨테이너 배포',
-  //       'Application Load Balancer를 통한 트래픽 분산',
-  //       'ECR을 활용한 컨테이너 이미지 관리'
-  //     ],
-  //     en: [
-  //       'FastAPI backend and Nginx frontend containerized with Docker',
-  //       'Serverless container deployment using AWS ECS Fargate',
-  //       'Traffic distribution with Application Load Balancer',
-  //       'Container image management with ECR'
-  //     ]
-  //   },
-  //   tags: ['ECS', 'Docker', 'Nginx', 'FastAPI'], 
-  //   link: 'https://github.com/mlee0323',
-  //   period: '2024.12 - 현재'
-  // },
+  { 
+    id: 'upbit-clone',
+    status: 'completed', 
+    name: { kr: '업비트 클론', en: 'Ubpit Clone' },
+    desc: { kr: '하이브리드 클러스터 구성의 업비트 구현', en: 'Ubpit Clone with Hybrid Cluster' },
+    detail: {
+      kr: [
+        'Redis를 활용한 실시간 시세 데이터 처리',
+
+      ],
+      en: [
+        'Real-time market data processing with Redis',
+
+      ]
+    },
+    tags: ['Kubernetes', 'VMWare', 'Docker', 'Node.js', 'Tailscale', 'Timescale', 'Redis', 'Grafana', 'Prometheus'], 
+    link: 'https://github.com/mlee0323/upbit-clone',
+    period: '2025.12.18-2026.01.09',
+    imageHeader: { kr: '아키텍처', en: 'Architecture' },
+    images: ['/images/projects/upbit-clone.png']
+  },
 
 ];
 

@@ -4,7 +4,7 @@
 export const personalProjects = [
   { 
     id: 'portfolio',
-    status: 'running', 
+    status: 'completed', 
     name: { kr: '포트폴리오 웹사이트', en: 'Portfolio Website' },
     desc: { kr: 'Next.js + Tailwind CSS 기반 포트폴리오', en: 'Portfolio built with Next.js + Tailwind CSS' },
     detail: {
@@ -25,25 +25,5 @@ export const personalProjects = [
     link: 'https://github.com/mlee0323',
     period: '2026.01.31-today'
   },
-  { 
-    id: 'upbit-clone',
-    status: 'completed', 
-    name: { kr: '업비트 클론', en: 'Ubpit Clone' },
-    desc: { kr: '하이브리드 클러스터 구성의 업비트 구현', en: 'Ubpit Clone with Hybrid Cluster' },
-    detail: {
-      kr: [
-        'Redis를 활용한 실시간 시세 데이터 처리',
 
-      ],
-      en: [
-        'Real-time market data processing with Redis',
-
-      ]
-    },
-    tags: ['Kubernetes', 'VMWare', 'Docker', 'Node.js', 'Tailscale', 'Timescale', 'Redis', 'Grafana', 'Prometheus'], 
-    link: 'https://github.com/mlee0323/upbit-clone',
-    period: '2025.12.18-2026.01.09',
-    imageHeader: { kr: '아키텍처', en: 'Architecture' },
-    images: ['/images/projects/upbit-clone.png']
-  },
 ];
