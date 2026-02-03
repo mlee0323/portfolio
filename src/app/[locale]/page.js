@@ -5,7 +5,7 @@ import { t } from '@/lib/i18n';
 import { use } from 'react';
 import { getRecentAllProjects, skills, stats } from '@/lib/data';
 
-function Counter({ target, icon, labelKey, locale }) {
+function Counter({ target, icon, labelKey, locale, href }) {
   const ref = useRef(null);
   
   useEffect(() => {
@@ -35,13 +35,13 @@ function Counter({ target, icon, labelKey, locale }) {
   }, [target]);
   
   return (
-    <div className="bg-aws-card border border-aws-border rounded-lg p-5 flex items-center gap-4 hover:border-aws-orange transition-all">
+    <Link href={href} className="bg-aws-card border border-aws-border rounded-lg p-5 flex items-center gap-4 hover:border-aws-orange transition-all cursor-pointer hover:scale-105 active:scale-95 block h-full">
       <span className="text-3xl">{icon}</span>
       <div className="flex flex-col">
         <span ref={ref} className="text-2xl font-bold text-aws-orange">0</span>
         <span className="text-xs text-aws-text-muted">{t(locale, labelKey)}</span>
       </div>
-    </div>
+    </Link>
   );
 }
 
@@ -63,17 +63,17 @@ export default function DashboardPage({ params }) {
             {t(locale, 'dashboard.intro')} <strong className="text-white">{t(locale, 'dashboard.name')}</strong>{t(locale, 'dashboard.desc')}
           </p>
           <div className="flex gap-2 flex-wrap mt-4">
-            <Link href={`/${locale}/projects`} className="px-3 py-2 bg-aws-orange text-black text-xs font-semibold rounded hover:bg-aws-orange-hover transition-all">
-              {t(locale, 'dashboard.viewProjects')}
+            <Link href={`/${locale}/about`} className="px-3 py-2 bg-aws-orange text-black text-xs font-semibold rounded hover:bg-aws-orange-hover transition-all">
+              {t(locale, 'dashboard.viewAbout')}
             </Link>
             <Link href={`/${locale}/contact`} className="px-3 py-2 border border-aws-border text-xs rounded hover:border-aws-orange transition-all">
               {t(locale, 'dashboard.contact')}
             </Link>
           </div>
         </div>
-        <Counter target={stats.skills} icon="🛠️" labelKey="stat.skills" locale={locale} />
-        <Counter target={stats.projects} icon="🚀" labelKey="stat.projects" locale={locale} />
-        <Counter target={stats.certs} icon="🏆" labelKey="stat.certs" locale={locale} />
+        <Counter target={stats.skills} icon="🛠️" labelKey="stat.skills" locale={locale} href={`/${locale}/skills`} />
+        <Counter target={stats.projects} icon="🚀" labelKey="stat.projects" locale={locale} href={`/${locale}/projects`} />
+        <Counter target={stats.certs} icon="🏆" labelKey="stat.certs" locale={locale} href={`/${locale}/certifications`} />
       </div>
 
       <div className="bg-aws-card border border-aws-border rounded-lg p-5 mb-6">

@@ -61,7 +61,12 @@ export default function Sidebar({ locale, isOpen, onClose }) {
   };
 
   const isActive = (href) => {
-    const currentPath = pathname.replace(`/${locale}`, '').replace(/^\//, '');
+    // Remove locale prefix and leading slash
+    let currentPath = pathname.replace(`/${locale}`, '').replace(/^\//, '');
+    // Remove trailing slash if present
+    if (currentPath.endsWith('/')) {
+      currentPath = currentPath.slice(0, -1);
+    }
     return currentPath === href || (href === '' && currentPath === '');
   };
 
