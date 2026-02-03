@@ -8,7 +8,6 @@ export const translations = {
     'nav.profile': '프로필',
     'nav.about': '소개',
     'nav.skills': '기술',
-    'nav.education': '교육',
     'nav.certifications': '자격증',
     'nav.projectsGroup': '프로젝트',
     'nav.mainProjects': '주요 프로젝트',
@@ -64,18 +63,12 @@ export const translations = {
     'projects.view': 'View →',
     'projects.techStacks': '🔧 기술 스택',
     'projects.details': '📋 주요 내용',
-    'projects.screenshots': '📷 스크린샷',
-    'projects.techStacks': '🔧 기술 스택',
-    'projects.details': '📋 주요 내용',
-    'projects.screenshots': '📷 스크린샷',
     
     // Personal Projects
     'personalProjects.title': '💡 개인 프로젝트',
     'personalProjects.subtitle': '학습 및 토이 프로젝트',
     
-    // Education
-    'education.title': '🎓 학력',
-    'education.subtitle': '교육 이력',
+    // Education (used in About page)
     'education.history': '📚 교육 이력',
     
     // Certifications
@@ -95,7 +88,6 @@ export const translations = {
     'nav.profile': 'Profile',
     'nav.about': 'About',
     'nav.skills': 'Skills',
-    'nav.education': 'Education',
     'nav.certifications': 'Certifications',
     'nav.projectsGroup': 'Projects',
     'nav.mainProjects': 'Main Projects',
@@ -151,15 +143,12 @@ export const translations = {
     'projects.view': 'View →',
     'projects.techStacks': '🔧 Tech Stacks',
     'projects.details': '📋 Key Details',
-    'projects.screenshots': '📷 Screenshots',
     
     // Personal Projects
     'personalProjects.title': '💡 Personal Projects',
     'personalProjects.subtitle': 'Learning & Toy Projects',
     
-    // Education
-    'education.title': '🎓 Education',
-    'education.subtitle': 'Academic Background',
+    // Education (used in About page)
     'education.history': '📚 Education History',
     
     // Certifications

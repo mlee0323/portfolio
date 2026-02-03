@@ -1,5 +1,5 @@
 "use client";
-import { useState, use } from 'react'; // useEffect, createPortal removed from here as they are in the component
+import { useState, use } from 'react';
 import { t } from '@/lib/i18n';
 import { projects } from '@/lib/data';
 import ProjectModal from '@/components/ProjectModal';

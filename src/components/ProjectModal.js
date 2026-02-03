@@ -77,12 +77,14 @@ export default function ProjectModal({ project, locale, onClose }) {
             </div>
           )}
 
-          {/* 이미지 렌더링 섹션 */}
+          {/* 이미지 렌더링 섹션 - imageHeader는 data에서 정의 */}
           {project.images && project.images.length > 0 && (
             <div>
-              <h3 className="font-medium mb-3 text-aws-text-secondary">
-                {project.imageHeader ? project.imageHeader[locale] : t(locale, 'projects.screenshots')}
-              </h3>
+              {project.imageHeader && (
+                <h3 className="font-medium mb-3 text-aws-text-secondary">
+                  {project.imageHeader[locale]}
+                </h3>
+              )}
               <div className="space-y-4">
                 {project.images.map((img, i) => (
                   <div key={i} className="border border-aws-border rounded-lg overflow-hidden">

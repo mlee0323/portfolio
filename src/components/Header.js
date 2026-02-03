@@ -8,7 +8,7 @@ const pageNames = {
   'about': { kr: '소개', en: 'About' },
   'skills': { kr: '기술', en: 'Skills' },
   'projects': { kr: '프로젝트', en: 'Projects' },
-  'education': { kr: '교육', en: 'Education' },
+  'certifications': { kr: '자격증', en: 'Certifications' },
   'contact': { kr: '연락처', en: 'Contact' },
 };
 
