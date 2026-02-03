@@ -20,7 +20,6 @@ const navGroups = [
     children: [
       { id: 'about', icon: '📋', labelKey: 'nav.about', href: 'about' },
       { id: 'skills', icon: '🛠️', labelKey: 'nav.skills', href: 'skills' },
-      { id: 'education', icon: '🎓', labelKey: 'nav.education', href: 'education' },
       { id: 'certifications', icon: '🏆', labelKey: 'nav.certifications', href: 'certifications' },
     ]
   },
