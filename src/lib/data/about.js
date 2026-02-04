@@ -1,6 +1,16 @@
-// 교육 이력 데이터 - 여기서만 관리
-// 추가/수정하면 Education 페이지에 자동 반영
+// 자기소개 및 교육 이력 데이터
+export const about = {
+  intro: {
+    kr: '안녕하세요! 클라우드 인프라와 DevOps에 열정을 가진 신입 엔지니어 이민석입니다.',
+    en: 'Hello! I am Minseok Lee, a junior engineer passionate about cloud infrastructure and DevOps.'
+  },
+  desc: {
+    kr: '부트캠프와 개인 프로젝트를 통해 AWS, Docker, Kubernetes 등 다양한 클라우드 기술을 학습했습니다. 항상 새로운 기술을 배우고 실무에 적용하는 것을 즐깁니다.',
+    en: 'Through bootcamp and personal projects, I have learned various cloud technologies including AWS, Docker, and Kubernetes. I always enjoy learning new technologies and applying them in practice.'
+  }
+};
 
+// 교육 이력 데이터
 export const education = [
   {
     title: { kr: '메가존클라우드 MSP 솔루션 아키텍트 양성과정', en: 'Megazone Cloud MSP Solution Architect Training' },

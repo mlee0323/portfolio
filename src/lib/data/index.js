@@ -4,7 +4,7 @@
 export { projects, getRecentProjects } from './projects';
 export { personalProjects } from './personal-projects';
 export { certifications } from './certifications';
-export { education } from './education';
+export { about, education } from './about';
 export { skills, skillCategories } from './skills';
 export { stats } from './stats';
 

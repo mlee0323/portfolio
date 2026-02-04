@@ -46,9 +46,12 @@ export default function Header({ onMenuToggle }) {
         >
           ☰
         </button>
-        <Link href={`/${locale}`} className="flex items-center gap-2 text-white font-bold">
-          <span className="text-aws-orange text-xl">▲</span>
-          <span>Lee</span>
+        <Link href={`/${locale}`} className="flex items-center hover:opacity-80 transition-opacity">
+          <img 
+            src={theme === 'dark' ? '/Lee-light.png' : '/Lee-dark.png'} 
+            alt="Lee Portfolio" 
+            className="h-11 w-auto object-contain" 
+          />
         </Link>
         <nav className="hidden md:flex items-center gap-2 text-sm text-aws-text-secondary">
           <span>Portfolio</span>

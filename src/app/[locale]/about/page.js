@@ -1,7 +1,7 @@
 "use client";
 import { t } from '@/lib/i18n';
 import { use } from 'react';
-import { education } from '@/lib/data';
+import { education, about } from '@/lib/data';
 
 export default function AboutPage({ params }) {
   const { locale } = use(params);
@@ -16,9 +16,9 @@ export default function AboutPage({ params }) {
       <div className="bg-aws-card border border-aws-border rounded-lg p-6 mb-6">
         <h2 className="text-aws-orange font-medium mb-4">{t(locale, 'about.introTitle')}</h2>
         <p className="text-lg text-white mb-3">
-          {t(locale, 'about.intro')} <strong>{t(locale, 'about.name')}</strong>{t(locale, 'about.introEnd')}
+          {about.intro[locale]}
         </p>
-        <p className="text-aws-text-secondary">{t(locale, 'about.desc')}</p>
+        <p className="text-aws-text-secondary">{about.desc[locale]}</p>
       </div>
 
       {/* Education Section Merged */}

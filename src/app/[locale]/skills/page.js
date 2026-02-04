@@ -3,6 +3,22 @@ import { t } from '@/lib/i18n';
 import { use } from 'react';
 import { skillCategories } from '@/lib/data';
 
+// 레벨별 스타일 정의
+const levelStyles = {
+  beginner: 'bg-gray-500/15 text-gray-400 border border-gray-500/30',
+  basic: 'bg-aws-orange/10 text-aws-orange border border-aws-orange/20',
+  intermediate: 'bg-aws-teal/15 text-aws-teal border border-aws-teal/30',
+  advanced: 'bg-purple-500/15 text-purple-400 border border-purple-500/30',
+};
+
+// 레벨 우선순위 (높을수록 먼저 표시)
+const levelOrder = { advanced: 4, intermediate: 3, basic: 2, beginner: 1 };
+
+// 스킬을 레벨순으로 정렬
+const sortSkillsByLevel = (skills) => {
+  return [...skills].sort((a, b) => levelOrder[b.level] - levelOrder[a.level]);
+};
+
 export default function SkillsPage({ params }) {
   const { locale } = use(params);
 
@@ -13,12 +29,19 @@ export default function SkillsPage({ params }) {
         <p className="text-sm text-aws-text-muted">{t(locale, 'skills.subtitle')}</p>
       </div>
 
-      <div className="flex gap-6 mb-5 p-3 bg-aws-card rounded-lg text-sm">
+      {/* 4단계 범례 */}
+      <div className="flex flex-wrap gap-4 mb-5 p-3 bg-aws-card rounded-lg text-sm">
         <span className="flex items-center gap-2">
-          <span className="w-3 h-3 rounded bg-aws-teal"></span> {t(locale, 'skills.learning')}
+          <span className="w-3 h-3 rounded bg-gray-500"></span> {t(locale, 'skills.beginner')}
         </span>
         <span className="flex items-center gap-2">
-          <span className="w-3 h-3 rounded bg-aws-orange opacity-60"></span> {t(locale, 'skills.basic')}
+          <span className="w-3 h-3 rounded bg-aws-orange"></span> {t(locale, 'skills.basic')}
+        </span>
+        <span className="flex items-center gap-2">
+          <span className="w-3 h-3 rounded bg-aws-teal"></span> {t(locale, 'skills.intermediate')}
+        </span>
+        <span className="flex items-center gap-2">
+          <span className="w-3 h-3 rounded bg-purple-500"></span> {t(locale, 'skills.advanced')}
         </span>
       </div>
 
@@ -30,14 +53,10 @@ export default function SkillsPage({ params }) {
               <h3 className="font-medium">{cat.title}</h3>
             </div>
             <div className="flex flex-wrap gap-2">
-              {cat.skills.map((skill, j) => (
+              {sortSkillsByLevel(cat.skills).map((skill, j) => (
                 <span 
                   key={j}
-                  className={`px-3 py-1.5 rounded text-xs font-medium transition-transform hover:scale-105 ${
-                    skill.level === 'learning' 
-                      ? 'bg-aws-teal/15 text-aws-teal border border-aws-teal/30' 
-                      : 'bg-aws-orange/10 text-aws-orange border border-aws-orange/20'
-                  }`}
+                  className={`px-3 py-1.5 rounded text-xs font-medium transition-transform hover:scale-105 ${levelStyles[skill.level]}`}
                 >
                   {skill.name}
                 </span>
