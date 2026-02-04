@@ -52,7 +52,7 @@ export const translations = {
     
     // Projects
     'projects.title': '🚀 주요 프로젝트',
-    'projects.subtitle': 'DevOps 및 인프라 프로젝트',
+    'projects.subtitle': '주요 및 팀 프로젝트',
     'projects.all': 'All',
     'projects.running': 'Running',
     'projects.completed': 'Completed',
@@ -132,7 +132,7 @@ export const translations = {
     
     // Projects
     'projects.title': '🚀 Main Projects',
-    'projects.subtitle': 'DevOps & Infrastructure Projects',
+    'projects.subtitle': 'Main & Team Projects',
     'projects.all': 'All',
     'projects.running': 'Running',
     'projects.completed': 'Completed',
