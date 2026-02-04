@@ -23,7 +23,7 @@ export const personalProjects = [
     },
     tags: ['Next.js', 'Tailwind', 'S3'], 
     link: 'https://github.com/mlee0323',
-    period: '2026.01.31-today'
+    period: '2026.01.31-2026.02.03'
   },
 
 ];
