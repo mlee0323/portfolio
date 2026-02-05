@@ -39,10 +39,10 @@ export default function Header({ onMenuToggle }) {
 
   return (
     <header className="fixed top-0 left-0 right-0 h-12 bg-aws-squid-ink flex items-center justify-between px-4 z-50 border-b border-aws-border">
-      <div className="flex items-center gap-3">
+      <div className="flex items-center">
         <button 
           onClick={onMenuToggle}
-          className="md:hidden text-white text-xl p-2 hover:bg-white/10 rounded"
+          className="md:hidden text-white text-xl p-2 hover:bg-white/10 rounded mr-2"
         >
           ☰
         </button>
@@ -53,6 +53,7 @@ export default function Header({ onMenuToggle }) {
             className="h-11 w-auto object-contain" 
           />
         </Link>
+        <div className="hidden md:block w-[1px] h-4 bg-aws-border ml-1 mr-3"></div>
         <nav className="hidden md:flex items-center gap-2 text-sm text-aws-text-secondary">
           <span>Portfolio</span>
           <span className="text-aws-text-muted">›</span>

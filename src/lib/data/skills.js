@@ -17,9 +17,9 @@ export const skillCategories = [
     icon: '☁️', title: 'AWS Services',
     skills: [
       { name: 'EC2', level: 'intermediate' }, { name: 'ECS', level: 'intermediate' },
-      { name: 'RDS', level: 'basic' }, { name: 'S3', level: 'intermediate' },
-      { name: 'VPC', level: 'basic' }, { name: 'IAM', level: 'basic' },
-      { name: 'CloudFront', level: 'beginner' }, { name: 'Route53', level: 'basic' },
+      { name: 'RDS', level: 'intermediate' }, { name: 'S3', level: 'intermediate' },
+      { name: 'VPC', level: 'intermediate' }, { name: 'IAM', level: 'intermediate' },
+      { name: 'CloudFront', level: 'basic' }, { name: 'Route53', level: 'basic' },
       { name: 'EKS', level: 'basic' },
     ]
   },
@@ -30,30 +30,31 @@ export const skillCategories = [
     ]
   },
   {
-    icon: '🔄', title: 'CI/CD',
+    icon: '🔄', title: 'CI / CD',
     skills: [
       { name: 'GitHub Actions', level: 'intermediate' },
     ]
   },
-  {
-    icon: '📝', title: 'IaC & Config',
-    skills: [
-      { name: 'Terraform', level: 'basic' }, { name: 'CloudFormation', level: 'beginner' },
-      { name: 'Ansible', level: 'beginner' },
-    ]
-  },
+  // {
+  //   icon: '📝', title: 'IaC & Config',
+  //   skills: [
+  //     { name: 'Terraform', level: 'basic' }, { name: 'CloudFormation', level: 'beginner' },
+  //     { name: 'Ansible', level: 'beginner' },
+  //   ]
+  // },
   {
     icon: '💻', title: 'Development',
     skills: [
       { name: 'Python', level: 'intermediate' }, { name: 'Bash', level: 'basic' },
-      { name: 'Linux', level: 'basic' }, { name: 'Git', level: 'intermediate' },
+      { name: 'Linux', level: 'intermediate' }, { name: 'Git', level: 'intermediate' },
+      { name: 'Node.js', level: 'intermediate' }, { name: 'Java', level: 'basic' },
     ]
   },
   {
     icon: '🌐', title: 'Web & Database',
     skills: [
-      { name: 'Nginx', level: 'intermediate' }, { name: 'FastAPI', level: 'basic' },
-      { name: 'MySQL', level: 'basic' }, { name: 'PostgreSQL', level: 'beginner' },
+      { name: 'Nginx', level: 'intermediate' }, { name: 'FastAPI', level: 'intermediate' },
+      { name: 'MySQL', level: 'intermediate' }, { name: 'PostgreSQL', level: 'intermediate' },
     ]
   },
 ];

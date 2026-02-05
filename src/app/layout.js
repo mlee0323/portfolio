@@ -1,8 +1,11 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "이민석 | DevOps Engineer Portfolio",
+  title: "Portfolio",
   description: "Junior DevOps Engineer - AWS, Docker, Kubernetes",
+  icons: {
+    icon: "/Lee-light.png",
+  },
 };
 
 export default function RootLayout({ children }) {
