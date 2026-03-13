@@ -97,14 +97,24 @@ export default function ProjectModal({ project, locale, onClose }) {
           )}
         </div>
 
-        <div className="sticky bottom-0 bg-aws-card border-t border-aws-border p-4 z-10">
+        <div className="sticky bottom-0 bg-aws-card border-t border-aws-border p-4 z-10 flex gap-3">
+          {project.presentation && (
+            <a 
+              href={project.presentation} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex-1 inline-flex justify-center items-center gap-2 px-4 py-2 border border-aws-border text-white font-semibold rounded hover:bg-aws-input transition-all"
+            >
+              {t(locale, 'projects.presentation') || 'Presentation'}
+            </a>
+          )}
           <a 
             href={project.link} 
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2 bg-aws-orange text-black font-semibold rounded hover:bg-aws-orange-hover transition-all"
+            className="flex-1 inline-flex justify-center items-center gap-2 px-4 py-2 bg-aws-orange text-black font-semibold rounded hover:bg-aws-orange-hover transition-all"
           >
-            💻 GitHub에서 보기 →
+            💻 GitHub
           </a>
         </div>
       </div>

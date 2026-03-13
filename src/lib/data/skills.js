@@ -7,7 +7,7 @@
 export const skills = [
   { name: 'AWS', progress: 70 },
   { name: 'Docker', progress: 75 },
-  { name: 'Kubernetes', progress: 50 },
+  { name: 'Kubernetes', progress: 55 },
   { name: 'Terraform', progress: 45 },
 ];
 
@@ -17,37 +17,46 @@ export const skillCategories = [
     icon: '☁️', title: 'AWS Services',
     skills: [
       { name: 'EC2', level: 'intermediate' }, { name: 'ECS', level: 'intermediate' },
+      { name: 'EKS', level: 'intermediate' }, { name: 'ECR', level: 'intermediate' },
       { name: 'RDS', level: 'intermediate' }, { name: 'S3', level: 'intermediate' },
       { name: 'VPC', level: 'intermediate' }, { name: 'IAM', level: 'intermediate' },
       { name: 'CloudFront', level: 'basic' }, { name: 'Route53', level: 'basic' },
-      { name: 'EKS', level: 'basic' },
+      { name: 'ACM', level: 'basic' }, { name: 'WAF', level: 'basic' },
     ]
   },
   {
-    icon: '🐳', title: 'Containers',
+    icon: '🐳', title: 'Containers & Orchestration',
     skills: [
       { name: 'Docker', level: 'intermediate' }, { name: 'Kubernetes', level: 'intermediate' },
+      { name: 'Istio', level: 'basic' }, { name: 'Karpenter', level: 'basic' },
     ]
   },
   {
     icon: '🔄', title: 'CI / CD',
     skills: [
-      { name: 'GitHub Actions', level: 'intermediate' },
+      { name: 'GitHub Actions', level: 'intermediate' }, { name: 'Argo CD', level: 'intermediate' },
     ]
   },
-  // {
-  //   icon: '📝', title: 'IaC & Config',
-  //   skills: [
-  //     { name: 'Terraform', level: 'basic' }, { name: 'CloudFormation', level: 'beginner' },
-  //     { name: 'Ansible', level: 'beginner' },
-  //   ]
-  // },
+  {
+    icon: '📝', title: 'IaC & Config',
+    skills: [
+      { name: 'Terraform', level: 'basic' }, { name: 'CloudFormation', level: 'beginner' },
+      { name: 'Ansible', level: 'beginner' },
+    ]
+  },
+  {
+    icon: '📊', title: 'Monitoring & Logging',
+    skills: [
+      { name: 'Prometheus', level: 'intermediate' }, { name: 'Grafana', level: 'intermediate' },
+      { name: 'Fluent Bit', level: 'basic' },
+    ]
+  },
   {
     icon: '💻', title: 'Development',
     skills: [
-      { name: 'Python', level: 'intermediate' }, { name: 'Bash', level: 'basic' },
+      { name: 'Python', level: 'intermediate' }, { name: 'Node.js', level: 'intermediate' },
       { name: 'Linux', level: 'intermediate' }, { name: 'Git', level: 'intermediate' },
-      { name: 'Node.js', level: 'intermediate' }, { name: 'Java', level: 'basic' },
+      { name: 'Bash', level: 'basic' }, { name: 'Java', level: 'basic' },
     ]
   },
   {
@@ -55,6 +64,7 @@ export const skillCategories = [
     skills: [
       { name: 'Nginx', level: 'intermediate' }, { name: 'FastAPI', level: 'intermediate' },
       { name: 'MySQL', level: 'intermediate' }, { name: 'PostgreSQL', level: 'intermediate' },
+      { name: 'Redis', level: 'basic' },
     ]
   },
 ];

@@ -55,6 +55,7 @@ export const translations = {
     'projects.view': 'View →',
     'projects.techStacks': '🔧 기술 스택',
     'projects.details': '📋 주요 내용',
+    'projects.presentation': '📄 발표자료',
     
     // Personal Projects
     'personalProjects.title': '💡 개인 프로젝트',
@@ -127,6 +128,7 @@ export const translations = {
     'projects.view': 'View →',
     'projects.techStacks': '🔧 Tech Stacks',
     'projects.details': '📋 Key Details',
+    'projects.presentation': '📄 Presentation',
     
     // Personal Projects
     'personalProjects.title': '💡 Personal Projects',
