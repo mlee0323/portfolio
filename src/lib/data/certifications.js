@@ -6,7 +6,7 @@ export const certifications = [
   { 
     name: { kr: 'TOEIC', en: 'TOEIC' },
     status: { kr: '2026년 취득', en: 'Acquired 2026' },
-    score: '959',
+    score: '955',
     preparing: false 
   },
   { 
