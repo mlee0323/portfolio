@@ -4,7 +4,7 @@
 export const projects = [
   { 
     id: 'airline',
-    status: 'in-progress', 
+    status: 'running', 
     name: { kr: '항공권 예매 웹사이트', en: 'Airline Ticket Reservation Website' },
     desc: { kr: 'EKS 기반 MSA 항공권 예매 플랫폼 (6인 팀 프로젝트 / 팀장)', en: 'EKS-based MSA airline booking platform (6-member team / Team Lead)' },
     detail: {
