@@ -1,0 +1,204 @@
+<svg width="1600" height="980" viewBox="0 0 1600 980" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="980" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F8FAFC"/>
+      <stop offset="1" stop-color="#EFF6FF"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0 0L10 5L0 10V0Z" fill="#475569"/>
+    </marker>
+    <style>
+      .title { font: 700 34px 'Arial', sans-serif; fill: #0F172A; }
+      .subtitle { font: 600 18px 'Arial', sans-serif; fill: #334155; }
+      .label { font: 600 16px 'Arial', sans-serif; fill: #0F172A; }
+      .small { font: 500 14px 'Arial', sans-serif; fill: #334155; }
+      .tiny { font: 600 12px 'Arial', sans-serif; fill: #475569; }
+      .chip { font: 700 15px 'Arial', sans-serif; fill: #FFFFFF; }
+      .pill { font: 700 14px 'Arial', sans-serif; fill: #0F172A; }
+      .box { fill: #FFFFFF; stroke: #CBD5E1; stroke-width: 2; rx: 20; }
+      .soft { fill: #F8FAFC; stroke: #CBD5E1; stroke-width: 2; rx: 18; }
+      .group { fill: rgba(255,255,255,0.82); stroke-width: 3; rx: 28; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="980" fill="url(#bg)"/>
+  <rect x="30" y="28" width="1540" height="924" rx="26" fill="#FFFFFF" stroke="#0F172A" stroke-width="3"/>
+
+  <text x="80" y="86" class="title">Airline Platform Infra / EKS Architecture</text>
+  <text x="80" y="116" class="subtitle">Terraform-managed AWS foundation with EKS runtime, observability, and validation pipelines</text>
+
+  <rect x="92" y="50" width="40" height="40" rx="10" fill="#111827"/>
+  <text x="112" y="76" text-anchor="middle" class="chip">AWS</text>
+
+  <rect x="420" y="54" width="90" height="64" rx="16" fill="#EC4899"/>
+  <text x="465" y="80" text-anchor="middle" class="chip">SSM</text>
+  <text x="465" y="102" text-anchor="middle" class="tiny">ops access</text>
+
+  <rect x="542" y="54" width="90" height="64" rx="16" fill="#E11D48"/>
+  <text x="587" y="80" text-anchor="middle" class="chip">KMS</text>
+  <text x="587" y="102" text-anchor="middle" class="tiny">S3 encryption</text>
+
+  <rect x="664" y="54" width="90" height="64" rx="16" fill="#F43F5E"/>
+  <text x="709" y="80" text-anchor="middle" class="chip">Inspector</text>
+  <text x="709" y="102" text-anchor="middle" class="tiny">image scanning</text>
+
+  <rect x="786" y="54" width="108" height="64" rx="16" fill="#DB2777"/>
+  <text x="840" y="80" text-anchor="middle" class="chip">CloudWatch</text>
+  <text x="840" y="102" text-anchor="middle" class="tiny">metrics / logs</text>
+
+  <rect x="1316" y="54" width="90" height="64" rx="16" fill="#F59E0B"/>
+  <text x="1361" y="80" text-anchor="middle" class="chip">ECR</text>
+  <text x="1361" y="102" text-anchor="middle" class="tiny">3 repos</text>
+
+  <line x1="1250" y1="200" x2="1361" y2="118" stroke="#475569" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="840" y1="118" x2="840" y2="180" stroke="#475569" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <circle cx="1510" cy="194" r="32" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+  <text x="1510" y="200" text-anchor="middle" class="label">GH</text>
+  <text x="1510" y="246" text-anchor="middle" class="small">GitHub</text>
+
+  <circle cx="1510" cy="106" r="32" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="2"/>
+  <text x="1510" y="112" text-anchor="middle" class="label">GA</text>
+  <text x="1510" y="158" text-anchor="middle" class="small">Actions</text>
+
+  <line x1="1510" y1="160" x2="1510" y2="138" stroke="#475569" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="1478" y1="194" x2="1406" y2="86" stroke="#475569" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="120" y="170" width="1340" height="694" class="group" stroke="#8B5CF6"/>
+  <text x="150" y="206" class="label">Virtual Private Cloud (ap-northeast-2)</text>
+
+  <rect x="156" y="324" width="130" height="80" rx="18" fill="#FFFFFF" stroke="#8B5CF6" stroke-width="3"/>
+  <text x="221" y="355" text-anchor="middle" class="label">ALB</text>
+  <text x="221" y="380" text-anchor="middle" class="small">Ingress entrypoint</text>
+
+  <line x1="286" y1="364" x2="382" y2="364" stroke="#475569" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="70" y="454" width="120" height="64" rx="18" fill="#4F46E5"/>
+  <text x="130" y="481" text-anchor="middle" class="chip">Route 53</text>
+  <text x="130" y="503" text-anchor="middle" class="tiny">DNS</text>
+
+  <rect x="210" y="454" width="134" height="64" rx="18" fill="#6366F1"/>
+  <text x="277" y="481" text-anchor="middle" class="chip">CloudFront</text>
+  <text x="277" y="503" text-anchor="middle" class="tiny">edge cache</text>
+
+  <rect x="210" y="544" width="134" height="64" rx="18" fill="#EF4444"/>
+  <text x="277" y="571" text-anchor="middle" class="chip">AWS WAF</text>
+  <text x="277" y="593" text-anchor="middle" class="tiny">managed rules</text>
+
+  <rect x="210" y="634" width="134" height="72" rx="18" fill="#84CC16"/>
+  <text x="277" y="662" text-anchor="middle" class="chip">S3</text>
+  <text x="277" y="684" text-anchor="middle" class="tiny">web / infra / logs</text>
+
+  <line x1="54" y1="486" x2="70" y2="486" stroke="#475569" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="190" y1="486" x2="210" y2="486" stroke="#475569" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="277" y1="518" x2="277" y2="544" stroke="#475569" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="344" y1="486" x2="420" y2="364" stroke="#475569" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <text x="18" y="490" class="label">Users</text>
+
+  <rect x="370" y="220" width="1046" height="282" class="group" stroke="#22C55E"/>
+  <text x="398" y="252" class="label">Availability Zone 2a</text>
+
+  <rect x="370" y="548" width="1046" height="282" class="group" stroke="#0EA5E9"/>
+  <text x="398" y="580" class="label">Availability Zone 2c</text>
+
+  <rect x="402" y="264" width="156" height="210" class="soft"/>
+  <rect x="414" y="278" width="102" height="28" rx="10" fill="#84CC16"/>
+  <text x="465" y="297" text-anchor="middle" class="chip">Public subnet</text>
+  <text x="480" y="344" text-anchor="middle" class="label">NAT</text>
+  <text x="480" y="368" text-anchor="middle" class="small">regional egress</text>
+  <rect x="432" y="394" width="96" height="46" rx="14" fill="#ECFCCB" stroke="#A3E635" stroke-width="2"/>
+  <text x="480" y="422" text-anchor="middle" class="pill">edge / elb</text>
+
+  <rect x="402" y="592" width="156" height="210" class="soft"/>
+  <rect x="414" y="606" width="102" height="28" rx="10" fill="#84CC16"/>
+  <text x="465" y="625" text-anchor="middle" class="chip">Public subnet</text>
+  <text x="480" y="672" text-anchor="middle" class="label">NAT</text>
+  <text x="480" y="696" text-anchor="middle" class="small">regional egress</text>
+  <rect x="432" y="722" width="96" height="46" rx="14" fill="#ECFCCB" stroke="#A3E635" stroke-width="2"/>
+  <text x="480" y="750" text-anchor="middle" class="pill">edge / elb</text>
+
+  <rect x="582" y="252" width="346" height="230" class="soft"/>
+  <rect x="594" y="266" width="170" height="28" rx="10" fill="#06B6D4"/>
+  <text x="679" y="285" text-anchor="middle" class="chip">Private subnet (Node)</text>
+  <rect x="620" y="324" width="102" height="54" rx="16" fill="#2563EB"/>
+  <text x="671" y="356" text-anchor="middle" class="chip">Karpenter</text>
+  <rect x="748" y="324" width="86" height="54" rx="16" fill="#1D4ED8"/>
+  <text x="791" y="356" text-anchor="middle" class="chip">HPA</text>
+  <rect x="670" y="402" width="164" height="48" rx="16" fill="#DBEAFE" stroke="#60A5FA" stroke-width="2"/>
+  <text x="752" y="431" text-anchor="middle" class="pill">auth / flight / payment</text>
+
+  <rect x="952" y="252" width="306" height="230" class="soft"/>
+  <rect x="964" y="266" width="160" height="28" rx="10" fill="#14B8A6"/>
+  <text x="1044" y="285" text-anchor="middle" class="chip">Private subnet (Pod)</text>
+  <rect x="984" y="324" width="102" height="54" rx="16" fill="#F97316"/>
+  <text x="1035" y="356" text-anchor="middle" class="chip">Prometheus</text>
+  <rect x="1102" y="324" width="92" height="54" rx="16" fill="#F59E0B"/>
+  <text x="1148" y="356" text-anchor="middle" class="chip">Grafana</text>
+  <rect x="1208" y="324" width="82" height="54" rx="16" fill="#06B6D4"/>
+  <text x="1249" y="356" text-anchor="middle" class="chip">FluentBit</text>
+  <rect x="1020" y="404" width="122" height="48" rx="16" fill="#E0F2FE" stroke="#38BDF8" stroke-width="2"/>
+  <text x="1081" y="433" text-anchor="middle" class="pill">Argo CD</text>
+  <rect x="1158" y="404" width="108" height="48" rx="16" fill="#E0F2FE" stroke="#38BDF8" stroke-width="2"/>
+  <text x="1212" y="433" text-anchor="middle" class="pill">k6 jobs</text>
+
+  <rect x="1282" y="252" width="112" height="230" class="soft"/>
+  <rect x="1294" y="266" width="90" height="28" rx="10" fill="#0EA5E9"/>
+  <text x="1339" y="285" text-anchor="middle" class="chip">DB</text>
+  <rect x="1304" y="332" width="70" height="60" rx="16" fill="#F5F3FF" stroke="#A78BFA" stroke-width="2"/>
+  <text x="1339" y="362" text-anchor="middle" class="pill">RDS</text>
+  <text x="1339" y="382" text-anchor="middle" class="tiny">primary</text>
+  <rect x="1302" y="408" width="74" height="46" rx="16" fill="#FAF5FF" stroke="#C084FC" stroke-width="2"/>
+  <text x="1339" y="436" text-anchor="middle" class="pill">Valkey</text>
+
+  <rect x="582" y="580" width="346" height="230" class="soft"/>
+  <rect x="594" y="594" width="170" height="28" rx="10" fill="#06B6D4"/>
+  <text x="679" y="613" text-anchor="middle" class="chip">Private subnet (Node)</text>
+  <rect x="620" y="652" width="102" height="54" rx="16" fill="#2563EB"/>
+  <text x="671" y="684" text-anchor="middle" class="chip">Karpenter</text>
+  <rect x="748" y="652" width="86" height="54" rx="16" fill="#1D4ED8"/>
+  <text x="791" y="684" text-anchor="middle" class="chip">HPA</text>
+  <rect x="670" y="730" width="164" height="48" rx="16" fill="#DBEAFE" stroke="#60A5FA" stroke-width="2"/>
+  <text x="752" y="759" text-anchor="middle" class="pill">service replicas</text>
+
+  <rect x="952" y="580" width="306" height="230" class="soft"/>
+  <rect x="964" y="594" width="160" height="28" rx="10" fill="#14B8A6"/>
+  <text x="1044" y="613" text-anchor="middle" class="chip">Private subnet (Pod)</text>
+  <rect x="984" y="652" width="102" height="54" rx="16" fill="#F97316"/>
+  <text x="1035" y="684" text-anchor="middle" class="chip">Prometheus</text>
+  <rect x="1102" y="652" width="92" height="54" rx="16" fill="#F59E0B"/>
+  <text x="1148" y="684" text-anchor="middle" class="chip">Grafana</text>
+  <rect x="1208" y="652" width="82" height="54" rx="16" fill="#06B6D4"/>
+  <text x="1249" y="684" text-anchor="middle" class="chip">FluentBit</text>
+  <rect x="1072" y="730" width="146" height="48" rx="16" fill="#E0F2FE" stroke="#38BDF8" stroke-width="2"/>
+  <text x="1145" y="759" text-anchor="middle" class="pill">observability stack</text>
+
+  <rect x="1282" y="580" width="112" height="230" class="soft"/>
+  <rect x="1294" y="594" width="90" height="28" rx="10" fill="#0EA5E9"/>
+  <text x="1339" y="613" text-anchor="middle" class="chip">DB</text>
+  <rect x="1304" y="660" width="70" height="60" rx="16" fill="#F5F3FF" stroke="#A78BFA" stroke-width="2"/>
+  <text x="1339" y="690" text-anchor="middle" class="pill">RDS</text>
+  <text x="1339" y="710" text-anchor="middle" class="tiny">standby</text>
+  <rect x="1302" y="736" width="74" height="46" rx="16" fill="#FAF5FF" stroke="#C084FC" stroke-width="2"/>
+  <text x="1339" y="764" text-anchor="middle" class="pill">Valkey</text>
+
+  <rect x="738" y="506" width="186" height="42" rx="16" fill="#F1F5F9" stroke="#94A3B8" stroke-width="2"/>
+  <text x="831" y="532" text-anchor="middle" class="pill">Shared VPC endpoints / east-west</text>
+
+  <line x1="558" y1="364" x2="582" y2="364" stroke="#475569" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="928" y1="364" x2="952" y2="364" stroke="#475569" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="1258" y1="364" x2="1282" y2="364" stroke="#475569" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="558" y1="692" x2="582" y2="692" stroke="#475569" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="928" y1="692" x2="952" y2="692" stroke="#475569" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="1258" y1="692" x2="1282" y2="692" stroke="#475569" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <line x1="1116" y1="252" x2="1260" y2="118" stroke="#475569" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="1080" y1="378" x2="1080" y2="404" stroke="#475569" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="1212" y1="452" x2="1212" y2="580" stroke="#475569" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="1339" y1="392" x2="1339" y2="580" stroke="#475569" stroke-width="3" stroke-dasharray="8 8" marker-end="url(#arrow)"/>
+
+  <rect x="122" y="884" width="1318" height="40" rx="20" fill="#0F172A"/>
+  <text x="150" y="910" class="chip">Validated by GitHub Actions</text>
+  <text x="392" y="910" class="chip">Terraform: VPC / ECR / WAF / S3 / KMS</text>
+  <text x="846" y="910" class="chip">EKS: namespaces / ingress / HPA / Karpenter / monitoring</text>
+</svg>
