@@ -33,7 +33,7 @@ export const projects = [
     link: 'https://github.com/Megazone-Final/airline-eks',
     period: '2026.02 - 진행중',
     imageHeader: { kr: 'EKS / 인프라 아키텍처', en: 'EKS / Infra Architecture' },
-    images: ['/images/projects/airline-architecture.svg']
+    images: ['/images/projects/Airline.jpg']
   },
 
 ];
