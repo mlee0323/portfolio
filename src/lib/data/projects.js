@@ -41,6 +41,36 @@ export const projects = [
     imageHeader: { kr: 'EKS / 인프라 아키텍처', en: 'EKS / Infra Architecture' },
     images: ['/images/projects/Airline.jpg']
   },
+  {
+    id: 'investment-analysis-ai',
+    status: 'completed',
+    name: { kr: '주식 투자 분석 및 종목 추천 시스템', en: 'Stock Investment Analysis and Recommendation System' },
+    desc: {
+      kr: '졸업작품 팀 프로젝트에서 TensorFlow 기반 주가 예측 모델을 구현하고 기술지표 feature engineering 및 학습 파이프라인을 구성',
+      en: 'Graduation team project where I implemented a TensorFlow-based stock prediction model with technical-indicator feature engineering and a training pipeline'
+    },
+    detail: {
+      kr: [
+        '팀 프로젝트에서 주가 예측 모델 파트를 담당하며 22개 주요 종목 대상 시계열 예측 파이프라인을 구현',
+        'TensorFlow 기반 LSTM 예측 모델을 구성하고 일부 종목 모델에는 Attention, Batch Normalization, Dropout, Huber loss를 적용해 학습 안정성을 보강',
+        'OHLCV 데이터에 RSI, MACD, 이동평균, 볼린저 밴드, ATR, ADX 등 기술적 지표를 추가해 feature engineering 수행',
+        'TimescaleDB와 연동해 주가 이력과 예측 결과를 저장하고 학습, 예측, 평가 스크립트를 분리해 운영 흐름을 정리',
+        'EarlyStopping, ReduceLROnPlateau, ModelCheckpoint를 적용하고 MSE, MAE, R2 기준으로 모델 성능을 점검',
+        '프로젝트 전체 시스템은 뉴스 감성 분석과 재무지표 기반 추천 로직과 연결되도록 설계'
+      ],
+      en: [
+        'Owned the stock prediction model in a team graduation project and built a time-series forecasting pipeline for 22 major Korean stocks',
+        'Implemented TensorFlow-based LSTM models and applied Attention, Batch Normalization, Dropout, and Huber loss to selected stock-specific models for more stable training',
+        'Performed feature engineering on OHLCV data with technical indicators such as RSI, MACD, moving averages, Bollinger Bands, ATR, and ADX',
+        'Integrated the pipeline with TimescaleDB for historical prices and prediction outputs, and separated training, inference, and evaluation scripts for a cleaner workflow',
+        'Used EarlyStopping, ReduceLROnPlateau, and ModelCheckpoint, and checked model quality with MSE, MAE, and R2 metrics',
+        'Connected the overall system to sentiment-analysis and financial-factor-based recommendation logic'
+      ]
+    },
+    tags: ['TensorFlow', 'LSTM', 'Time Series', 'Feature Engineering', 'TimescaleDB', 'MongoDB'],
+    link: 'https://github.com/Team-DIFFUSER/Investment_analysis_ai',
+    period: '2025.03 - 2025.08'
+  },
 
 ];
 
