@@ -11,7 +11,7 @@ export const certifications = [
   },
   { 
     name: { kr: 'OPIc', en: 'OPIc' },
-    status: { kr: '2025년 취득', en: 'Acquired 2025' },
+    status: { kr: '2026년 취득', en: 'Acquired 2026' },
     score: 'IH',
     preparing: false 
   },
