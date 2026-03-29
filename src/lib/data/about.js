@@ -5,8 +5,8 @@ export const about = {
     en: "Hi, I'm Minseok Lee — a Cloud Infrastructure & DevOps Engineer focused on designing and automating cloud-native infrastructure."
   },
   desc: {
-    kr: 'AWS, Docker, Kubernetes를 중심으로 클라우드 환경을 직접 설계하고 구축해보며 경험을 쌓아가고 있습니다. 인프라를 코드로 관리하고 배포를 자동화하면서, 확장성과 안정성 모두를 갖춘 플랫폼을 만들어가는 것이 목표입니다.',
-    en: "I've been building hands-on experience designing and deploying cloud environments around AWS, Docker, and Kubernetes. My goal is to build platforms that are both scalable and reliable — with infrastructure managed as code and deployments fully automated."
+    kr: 'AWS, Docker, Kubernetes를 중심으로 클라우드 환경을 직접 설계하고 구축해보며 경험을 쌓아가고 있습니다. 인프라를 코드로 관리하고 배포를 자동화하면서, 확장성과 안정성 모두를 갖춘 플랫폼을 만들어가는 것이 목표입니다. 또한 생성형 AI 도구 활용과 오픈소스 AI 에이전트 환경(OpenClaw 등) 구축 및 활용 경험을 바탕으로 문제 해결과 작업 생산성을 높이고 있습니다.',
+    en: "I've been building hands-on experience designing and deploying cloud environments around AWS, Docker, and Kubernetes. My goal is to build platforms that are both scalable and reliable — with infrastructure managed as code and deployments fully automated. I also improve problem solving and delivery speed by using generative AI tools and by setting up and working with open-source AI agent environments such as OpenClaw."
   }
 };
 

@@ -9,6 +9,7 @@ export const skills = [
   { name: 'Docker', progress: 75 },
   { name: 'Kubernetes', progress: 55 },
   { name: 'Terraform', progress: 45 },
+  { name: 'AI Tools', progress: 85 },
 ];
 
 // Skills 페이지에서 사용하는 카테고리별 스킬
@@ -57,6 +58,14 @@ export const skillCategories = [
       { name: 'Python', level: 'intermediate' }, { name: 'Node.js', level: 'intermediate' },
       { name: 'Linux', level: 'intermediate' }, { name: 'Git', level: 'intermediate' },
       { name: 'Bash', level: 'basic' }, { name: 'Java', level: 'basic' },
+    ]
+  },
+  {
+    icon: '🤖', title: 'AI & Productivity',
+    skills: [
+      { name: 'Generative AI Tooling', level: 'advanced' },
+      { name: 'Prompting & Workflow Design', level: 'advanced' },
+      { name: 'Open-source AI Agent Setup', level: 'intermediate' },
     ]
   },
   {
