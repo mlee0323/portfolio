@@ -26,8 +26,8 @@ export const education = [
     org: { kr: '소프트웨어공학 학사', en: 'Bachelor of Software Engineering' },
     date: { kr: '2026.02 졸업', en: 'Graduated Feb 2026' },
     items: {
-      kr: ['졸업작품 : 주식 투자 분석 및 종목 추천 시스템 (TensorFlow 기반 주가 예측 모델 구현)'],
-      en: ['Graduation Project: Stock Investment Analysis and Recommendation System (implemented a TensorFlow-based stock prediction model)']
+      kr: ['졸업작품 : 주식 투자 분석 및 종목 추천 시스템 (기존 예측 모델 튜닝 및 데이터 전처리)'],
+      en: ['Graduation Project: Stock Investment Analysis and Recommendation System (tuned an existing prediction model and handled data preprocessing)']
     }
   },
 ];
