@@ -43,7 +43,7 @@ export const projects = [
     link: 'https://github.com/orgs/Megazone-Final/repositories?q=airline',
     period: '2026.02 - 진행중',
     imageHeader: { kr: 'EKS / 인프라 아키텍처', en: 'EKS / Infra Architecture' },
-    images: ['/images/projects/Airline.jpg']
+    images: ['/images/projects/Airline.png']
   },
   {
     id: 'investment-analysis-ai',
