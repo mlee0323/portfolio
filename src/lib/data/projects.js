@@ -4,9 +4,9 @@
 export const projects = [
   { 
     id: 'airline',
-    status: 'running', 
+    status: 'completed', 
     name: { kr: '항공권 예매 웹사이트', en: 'Airline Ticket Reservation Website' },
-    desc: { kr: 'Terraform + EKS + Helm/Argo CD 기반 항공 서비스 플랫폼 구축 진행 중 (6인 팀 프로젝트 / 팀장)', en: 'Airline platform in progress with Terraform, EKS, Helm, and Argo CD (6-member team / Team Lead)' },
+    desc: { kr: 'Terraform + EKS + Helm/Argo CD 기반 항공 서비스 플랫폼 구축 완료 (6인 팀 프로젝트 / 팀장)', en: 'Completed airline platform built with Terraform, EKS, Helm, and Argo CD (6-member team / Team Lead)' },
     detail: {
       kr: [
         'Terraform으로 prod VPC를 코드화하고 public / node / pod / db subnet을 2개 AZ(2a, 2c) 기준으로 분리',
@@ -41,7 +41,7 @@ export const projects = [
     },
     tags: ['Terraform', 'EKS', 'Helm', 'Argo CD', 'Istio Ambient', 'Karpenter', 'ALB Ingress', 'k6', 'ECR', 'Valkey', 'Prometheus', 'Grafana', 'WAF'],
     link: 'https://github.com/orgs/Megazone-Final/repositories?q=airline',
-    period: '2026.02 - 진행중',
+    period: '2026.02 - 2026.05',
     imageHeader: { kr: 'EKS / 인프라 아키텍처', en: 'EKS / Infra Architecture' },
     images: ['/images/projects/Airline.png']
   },
@@ -50,26 +50,26 @@ export const projects = [
     status: 'completed',
     name: { kr: '주식 투자 분석 및 종목 추천 시스템', en: 'Stock Investment Analysis and Recommendation System' },
     desc: {
-      kr: '졸업작품 팀 프로젝트에서 기존 주가 예측 모델을 튜닝하고, 논문·오픈소스·AI 도구를 참고해 데이터 전처리와 학습 흐름을 정리',
-      en: 'Graduation team project where I tuned an existing stock prediction model and organized data preprocessing and training flow based on papers, open-source references, and AI tools'
+      kr: '졸업작품 팀 프로젝트에서 LSTM 계열 딥러닝 구조를 바탕으로 주가 예측용 시계열 모델을 구성하고, 데이터 전처리부터 학습 흐름까지 정리',
+      en: 'Graduation team project where I built an LSTM-based time-series model for stock prediction and organized the flow from data preprocessing to training'
     },
     detail: {
       kr: [
-        '팀 프로젝트에서 주가 예측 모델 파트를 맡아 기존 모델 구조를 이해하고 프로젝트에 맞게 조정',
-        '논문, 오픈소스 구현, AI 도구를 참고해 모델 학습 방식과 데이터 처리 흐름을 정리',
-        '주가 데이터 전처리와 입력 feature 정리, 학습 및 예측 스크립트 관리 등 실험 환경을 보완',
-        '예측 결과가 추천 시스템에서 활용될 수 있도록 저장 구조와 연결 흐름을 맞춤',
-        '처음부터 새 모델을 설계했다기보다 기존 모델을 튜닝하고 프로젝트 맥락에 맞게 적용한 경험'
+        '팀 프로젝트에서 주가 예측 모델 파트를 맡아 LSTM 계열 딥러닝 구조를 활용한 커스텀 시계열 모델을 구성하고 학습',
+        '논문, 오픈소스 구현, AI 도구를 참고해 입력 feature, 시퀀스 구성, 학습 흐름을 프로젝트 데이터에 맞게 정리',
+        '주가 데이터 전처리, feature 정리, 학습 및 예측 스크립트 관리 등 실험 환경을 구성',
+        '예측 결과가 추천 시스템에서 활용될 수 있도록 저장 구조와 후속 연결 흐름을 맞춤',
+        '기존 공개 구조를 그대로 적용하는 데서 그치지 않고 프로젝트 목적에 맞게 모델과 데이터 흐름을 재구성한 경험'
       ],
       en: [
-        'Worked on the stock prediction part of a team graduation project by understanding the existing model structure and adjusting it to fit the project',
-        'Used papers, open-source implementations, and AI tools as references to organize the training approach and data processing flow',
-        'Improved the experiment setup by handling stock data preprocessing, feature organization, and training and prediction scripts',
-        'Aligned the storage structure and output flow so prediction results could be used by the recommendation system',
-        'This experience was more about tuning and adapting an existing model than designing a new model from scratch'
+        'Owned the stock prediction part of the graduation project by building and training a custom time-series model based on an LSTM-style deep learning structure',
+        'Used papers, open-source implementations, and AI tools to organize input features, sequence construction, and the training flow for the project dataset',
+        'Set up the experiment environment by handling stock data preprocessing, feature organization, and training and prediction scripts',
+        'Aligned the storage structure and downstream flow so prediction results could be used by the recommendation system',
+        'Went beyond applying a public baseline as-is by restructuring the model and data flow to fit the project goal'
       ]
     },
-    tags: ['Python', 'Model Tuning', 'Data Processing', 'AI Tooling', 'TimescaleDB'],
+    tags: ['Python', 'Deep Learning', 'Time-Series', 'Data Processing', 'AI Tooling', 'TimescaleDB'],
     link: 'https://github.com/Team-DIFFUSER/Investment_analysis_ai',
     period: '2025.03 - 2025.08'
   },
