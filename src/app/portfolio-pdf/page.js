@@ -90,12 +90,11 @@ export default function PortfolioPdfPage() {
             <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
               <div className="max-w-2xl">
                 <p className="mb-3 text-sm font-medium uppercase tracking-[0.28em] text-sky-300">
-                  DevOps Engineer Portfolio
+                  Cloud Infrastructure &amp; DevOps Portfolio
                 </p>
                 <h1 className="text-4xl font-semibold tracking-tight">이민석</h1>
                 <p className="mt-3 text-lg text-slate-200">
-                  클라우드 네이티브 환경의 인프라 설계와 운영 자동화에 집중하는 신입
-                  DevOps 엔지니어
+                  클라우드 인프라 설계, DevOps 자동화, AI 활용 경험을 함께 담은 포트폴리오
                 </p>
                 <p className="mt-5 text-sm leading-7 text-slate-300">{about.intro.kr}</p>
                 <p className="mt-2 text-sm leading-7 text-slate-300">{about.desc.kr}</p>

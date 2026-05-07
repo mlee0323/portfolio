@@ -2,7 +2,7 @@ import "./globals.css";
 
 export const metadata = {
   title: "Portfolio",
-  description: "Junior DevOps Engineer - AWS, Docker, Kubernetes",
+  description: "Cloud Infrastructure, DevOps, and AI Portfolio - AWS, Kubernetes, Terraform",
   icons: {
     icon: "/Lee-light.png",
   },

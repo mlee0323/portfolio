@@ -16,7 +16,7 @@ export const translations = {
     
     // Dashboard
     'dashboard.title': '대시보드',
-    'dashboard.subtitle': 'Junior DevOps Engineer 포트폴리오 개요',
+    'dashboard.subtitle': '클라우드 인프라 · DevOps · AI 포트폴리오 개요',
     'dashboard.greeting': '👋 안녕하세요!',
     'dashboard.intro': '클라우드 인프라, DevOps, AI 활용 경험을 함께 쌓아온',
     'dashboard.name': '신입 엔지니어 이민석',
@@ -31,7 +31,7 @@ export const translations = {
     
     // About
     'about.title': '👤 About Me',
-    'about.subtitle': '신입 DevOps 엔지니어 소개',
+    'about.subtitle': '클라우드 인프라 · DevOps · AI 활용 경험 소개',
     'about.introTitle': '자기소개',
     
     // Skills
@@ -89,7 +89,7 @@ export const translations = {
     
     // Dashboard
     'dashboard.title': 'Dashboard',
-    'dashboard.subtitle': 'Junior DevOps Engineer Portfolio Overview',
+    'dashboard.subtitle': 'Cloud Infrastructure, DevOps & AI Portfolio Overview',
     'dashboard.greeting': '👋 Hello!',
     'dashboard.intro': 'An engineer building experience across cloud infrastructure, DevOps, and practical AI work,',
     'dashboard.name': 'Minseok Lee',
@@ -104,7 +104,7 @@ export const translations = {
     
     // About
     'about.title': '👤 About Me',
-    'about.subtitle': 'Junior DevOps Engineer Introduction',
+    'about.subtitle': 'Introduction to My Cloud Infrastructure, DevOps, and AI Work',
     'about.introTitle': 'Introduction',
     
     // Skills
