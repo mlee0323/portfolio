@@ -15,7 +15,7 @@ export const education = [
   {
     title: { kr: '메가존클라우드 MSP 솔루션 아키텍트 양성과정', en: 'Megazone Cloud MSP Solution Architect Training' },
     org: { kr: '메가존클라우드', en: 'Megazone Cloud' },
-    date: { kr: '2025.09 - 진행중', en: '2025.09 - in progress' },
+    date: { kr: '2025.09 - 2026.04', en: '2025.09 - Apr 2026' },
     items: {
       kr: ['VMWare 기반 온프레미스 환경 학습', 'AWS & GCP 핵심 서비스 학습', 'Docker/Kubernetes 실습', 'Terraform 실습', 'CI/CD 파이프라인 구축', '팀 프로젝트 수행'],
       en: ['VMWare On-premise Environment', 'AWS & GCP Core Services', 'Docker/Kubernetes Hands-on', 'Terraform Hands-on', 'CI/CD Pipeline Setup', 'Team Project Experience']
