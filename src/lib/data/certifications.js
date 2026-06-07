@@ -16,12 +16,13 @@ export const certifications = [
     preparing: false 
   },
 
-  // 취득 예정 (준비 중)
   { 
-    name: { kr: 'AWS Solutions Architect', en: 'AWS Solutions Architect Associate' },
-    status: { kr: '준비중', en: 'Preparing' },
-    preparing: true 
+    name: { kr: 'AWS Certified Solutions Architect - Associate', en: 'AWS Certified Solutions Architect - Associate' },
+    status: { kr: '2026년 6월 취득', en: 'Acquired Jun 2026' },
+    score: 'SAA-C03',
+    preparing: false 
   },
+  // 취득 예정 (준비 중)
   { 
     name: { kr: 'CKA', en: 'CKA' },
     status: { kr: '준비중', en: 'Preparing' },
