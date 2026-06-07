@@ -265,6 +265,9 @@ export default function PortfolioPdfPage() {
                       {project.name.kr}
                     </h3>
                     <p className="mt-2 text-sm leading-6 text-slate-600">{project.desc.kr}</p>
+                    {project.role ? (
+                      <p className="mt-2 text-sm font-medium text-sky-700">{project.role.kr}</p>
+                    ) : null}
                   </div>
 
                   <div className="flex flex-wrap gap-2 text-sm">

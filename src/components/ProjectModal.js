@@ -1,15 +1,9 @@
 "use client";
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { t } from '@/lib/i18n';
 
 export default function ProjectModal({ project, locale, onClose }) {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   useEffect(() => {
     const handleEsc = (e) => {
       if (e.key === 'Escape') onClose();
@@ -18,7 +12,7 @@ export default function ProjectModal({ project, locale, onClose }) {
     return () => window.removeEventListener('keydown', handleEsc);
   }, [onClose]);
 
-  if (!project || !mounted) return null;
+  if (!project || typeof document === 'undefined') return null;
 
   const modalContent = (
     <div className="fixed inset-0 bg-black/70 z-[100] flex items-center justify-center p-4" onClick={onClose}>
@@ -52,6 +46,15 @@ export default function ProjectModal({ project, locale, onClose }) {
             </div>
           )}
 
+          {project.role && (
+            <div>
+              <h3 className="font-medium mb-2 text-aws-text-secondary">
+                {locale === 'kr' ? '담당 역할' : 'Role'}
+              </h3>
+              <p className="text-sm text-aws-text-secondary">{project.role[locale]}</p>
+            </div>
+          )}
+
           <div>
             <h3 className="font-medium mb-2 text-aws-orange">{t(locale, 'projects.techStacks')}</h3>
             <div className="flex flex-wrap gap-2">
@@ -70,6 +73,22 @@ export default function ProjectModal({ project, locale, onClose }) {
                 {project.detail[locale].map((item, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm text-aws-text-secondary">
                     <span className="text-aws-teal mt-0.5">•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {project.extraDetail && (
+            <div>
+              <h3 className="font-medium mb-2 text-aws-text-secondary">
+                {project.extraDetailTitle?.[locale] || (locale === 'kr' ? '세부 구현 내역' : 'Implementation Details')}
+              </h3>
+              <ul className="space-y-2">
+                {project.extraDetail[locale].map((item, i) => (
+                  <li key={i} className="flex items-start gap-2 text-sm text-aws-text-secondary">
+                    <span className="text-aws-text-muted mt-0.5">•</span>
                     <span>{item}</span>
                   </li>
                 ))}

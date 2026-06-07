@@ -5,41 +5,53 @@ export const projects = [
   { 
     id: 'airline',
     status: 'completed', 
-    name: { kr: '항공권 예매 웹사이트', en: 'Airline Ticket Reservation Website' },
-    desc: { kr: 'Terraform + EKS + Helm/Argo CD 기반 항공 서비스 플랫폼 구축 완료 (6인 팀 프로젝트 / 팀장)', en: 'Completed airline platform built with Terraform, EKS, Helm, and Argo CD (6-member team / Team Lead)' },
+    name: { kr: 'Airline Platform | AWS EKS 기반 항공 예약 마이크로서비스 플랫폼', en: 'Airline Platform | AWS EKS-based Airline Reservation Microservices Platform' },
+    desc: {
+      kr: '6인 팀 프로젝트에서 항공권 예매 트래픽 시나리오를 가정한 AWS EKS 기반 마이크로서비스 플랫폼 PoC를 설계·구축',
+      en: 'Designed and built an AWS EKS-based microservices platform PoC for airline reservation traffic scenarios in a 6-member team project'
+    },
+    role: {
+      kr: 'Team Lead / Cloud-Native Delivery & Observability Lead',
+      en: 'Team Lead / Cloud-Native Delivery & Observability Lead'
+    },
     detail: {
       kr: [
-        'Terraform으로 prod VPC를 코드화하고 public / node / pod / db subnet을 2개 AZ(2a, 2c) 기준으로 분리',
-        'Terraform의 eks / eks_addons 모듈로 EKS 클러스터, managed node group, IRSA, ENIConfig, Karpenter 리소스를 함께 관리하도록 확장',
-        'auth / flight / payment 서비스를 Helm chart 구조로 전환하고 Argo CD Application + Image Updater annotation 기반 GitOps 배포 흐름을 구성',
-        'airline-auth / flight / payment namespace에 Istio Ambient 라벨과 Argo CD sync-wave를 반영하고 ALB Ingress 및 admin ingress 경로를 구성',
-        'Istio Ambient Mesh용 base / CNI / istiod / ztunnel 구성을 추가하고 auth / payment 서비스의 outbound IP 예외 설정을 조정',
-        'Karpenter NodePool + 서비스별 HPA(min 2, max 10) 조합으로 확장 전략을 구성하고 k6 Job 기반 부하 테스트 자산을 정리',
-        '기존 k6 시나리오를 유지한 상태에서 3대 EC2 분산 부하 테스트를 다시 수행해 총 4,200 VUs 안정 구간과 총 15,000 VUs stress 구간 기준을 정리',
-        '대표 노드 기준 1,400 VUs에서 p95 17ms 이하·실패율 0%, 5,000 VUs에서는 p95 약 89ms·실패율 0.74%·dropped iterations를 확인해 saturation point를 식별',
-        'Prometheus / Grafana / Fluent Bit 운영 스택과 Grafana persistence, Prometheus 15일 보존 정책을 반영',
-        'GitHub Actions로 Terraform fmt / validate / plan, Kubernetes manifest kubeconform 검증 파이프라인 구성',
-        'Valkey 세션 / 서비스 캐시용 Terraform 모듈과 endpoint output을 추가하고, ElastiCache 인증 방식을 password + IAM으로 분리',
-        'ECR scan-on-push를 registry-level scanning 방식으로 전환하고 lifecycle 정책을 유지',
-        'S3(web / infra / logs), KMS, CloudFront 범위 WAF managed rules를 Terraform 리소스 기준으로 정리해 외부 노출 경계를 분리',
+        '6인 팀의 팀장으로 항공권 예매 트래픽 시나리오를 가정한 AWS EKS 기반 마이크로서비스 플랫폼 PoC를 설계·구축하고, task breakdown·technical discussion·morning seminar·Q&A 루틴으로 팀 내 지식 격차를 완화',
+        'Route 53, CloudFront, WAF, ALB, Kubernetes Ingress, Service, Pod로 이어지는 end-to-end traffic path를 설계해 외부 유입부터 워크로드 도달까지의 요청 흐름을 정리',
+        'Terraform 모듈로 VPC, EKS, IRSA, ENIConfig, Karpenter 기반 node autoscaling 등 인프라 리소스를 구성하고 운영 가능한 클라우드 네이티브 구조를 코드로 관리',
+        'GitHub Actions OIDC, Helm, Argo CD 기반 GitOps 배포 흐름을 구축해 인프라 변경과 애플리케이션 배포를 일관된 방식으로 검증·반영',
+        'IRSA 기반 pod-level AWS permission, SSM Session Manager 기반 SSH 미노출 노드 접근, WAF rule 기반 외부 경계 제어를 적용해 기본 보안 운영 모델을 구성',
+        'Prometheus, Grafana, Fluent Bit, CloudWatch 기반 metric/log observability를 구성하고 CloudWatch·S3 log routing을 붙여 운영 관찰성을 확보',
+        'k6 API-level load test를 최대 25,000 req/s 조건까지 수행했고, 테스트 기준 99.93% success rate, 21.1 ms average response time, 109.8 ms p99 latency를 관찰',
+        'readiness probe misconfiguration, pod IP range limitation, HPA/Karpenter scaling condition 등 운영 이슈를 확인하고 후속 개선 항목으로 문서화'
       ],
       en: [
-        'Codified the prod VPC with Terraform and split public, node, pod, and db subnets across two AZs (2a, 2c)',
-        'Expanded the Terraform eks and eks_addons modules to manage the EKS cluster, managed node group, IRSA, ENIConfig, and Karpenter resources together',
-        'Migrated auth, flight, and payment services to Helm charts and wired a GitOps deployment flow with Argo CD Applications plus Image Updater annotations',
-        'Applied Istio Ambient labels and Argo CD sync-wave settings to the airline-auth, flight, and payment namespaces and configured ALB plus admin ingress paths',
-        'Added the Istio Ambient Mesh base, CNI, istiod, and ztunnel setup and tuned outbound IP exclusions for the auth and payment services',
-        'Combined Karpenter NodePool and per-service HPA (min 2, max 10) to shape the scaling strategy and organized k6 load-test assets',
-        'Re-ran the existing k6 scenarios as a distributed test across three EC2 instances and defined both the stable 4,200 VUs range and the 15,000 VUs stress range',
-        'Using the representative node output, confirmed sub-17ms p95 with 0% failures at 1,400 VUs and identified the saturation point at 5,000 VUs with ~89ms p95, 0.74% failures, and dropped iterations',
-        'Configured the Prometheus, Grafana, and Fluent Bit stack with Grafana persistence and 15-day Prometheus retention',
-        'Built GitHub Actions validation flows for Terraform fmt/validate/plan and Kubernetes manifests with kubeconform',
-        'Added a Terraform Valkey module plus endpoint outputs for session and service caches, splitting ElastiCache authentication into password and IAM modes',
-        'Migrated ECR scan-on-push to registry-level scanning while keeping lifecycle retention policies',
-        'Organized S3 buckets (web, infra, logs), KMS encryption, and CloudFront-scoped WAF managed rules as Terraform resources for edge security',
+        'Led a 6-member team in designing and building an AWS EKS-based microservices platform PoC for airline reservation traffic scenarios, and used task breakdowns, technical discussions, morning seminars, and Q&A routines to reduce knowledge gaps across the team',
+        'Designed the end-to-end traffic path across Route 53, CloudFront, WAF, ALB, Kubernetes Ingress, Service, and Pod so the external request flow was explicit from edge to workload',
+        'Provisioned infrastructure resources through Terraform modules, including VPC, EKS, IRSA, ENIConfig, and Karpenter-based node autoscaling, to manage an operable cloud-native foundation as code',
+        'Built a GitOps delivery flow with GitHub Actions OIDC, Helm, and Argo CD so infrastructure and application changes could be validated and promoted in a consistent way',
+        'Applied a baseline security model with IRSA-based pod-level AWS permissions, SSH-free node access through SSM Session Manager, and WAF rules at the external boundary',
+        'Set up observability with Prometheus, Grafana, Fluent Bit, and CloudWatch, including CloudWatch and S3 log routing for metrics and log visibility',
+        'Ran k6 API-level load tests up to 25,000 req/s and observed a 99.93 percent success rate, 21.1 ms average response time, and 109.8 ms p99 latency under the documented test condition',
+        'Identified operational issues such as readiness probe misconfiguration, pod IP range limits, and HPA or Karpenter scaling conditions, then documented them as follow-up improvements'
       ]
     },
-    tags: ['Terraform', 'EKS', 'Helm', 'Argo CD', 'Istio Ambient', 'Karpenter', 'ALB Ingress', 'k6', 'ECR', 'Valkey', 'Prometheus', 'Grafana', 'WAF'],
+    extraDetailTitle: { kr: '세부 구현 내역', en: 'Implementation Details' },
+    extraDetail: {
+      kr: [
+        'Istio Ambient Mesh 기반 namespace 분리와 admin ingress 경로 구성',
+        'Valkey 세션/서비스 캐시 구성과 ElastiCache 인증 방식 분리',
+        'ECR scan-on-push와 lifecycle 정책, kubeconform 기반 Kubernetes manifest 검증',
+        'S3(web / infra / logs), KMS, CloudWatch 연동으로 로그 저장 및 보호 경계 구성'
+      ],
+      en: [
+        'Namespace segmentation and admin ingress paths built around an Istio Ambient Mesh setup',
+        'Valkey-backed session and service cache design with separated ElastiCache authentication modes',
+        'ECR scan-on-push and lifecycle policies, plus Kubernetes manifest validation with kubeconform',
+        'Log storage and protection boundaries organized with S3 buckets for web, infra, and logs, KMS, and CloudWatch integration'
+      ]
+    },
+    tags: ['AWS', 'EKS', 'Terraform', 'Helm', 'Argo CD', 'GitHub Actions', 'Prometheus', 'Grafana', 'Fluent Bit', 'CloudWatch', 'k6'],
     link: 'https://github.com/orgs/Megazone-Final/repositories?q=airline',
     period: '2026.02 - 2026.05',
     imageHeader: { kr: 'EKS / 인프라 아키텍처', en: 'EKS / Infra Architecture' },
